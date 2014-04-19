@@ -1,34 +1,34 @@
-url: http://entenhausen.freifunk.net
+url: http://freifunk.in-kiel.de
 
 community:
   # Metadata
-  name: "Entenhausen"
+  name: "Kiel"
 
   # Custom URLs
   url_wiki:  "/wiki"
-  url_geomap: "/map/geomap.html"
-  url_graph: "/map/graph.html"
-  url_nodelist: "/wiki/Knoten"
-  url_mailman: "http://lists.entenhausen.freifunk.net/mailman/listinfo/list"
+  url_geomap: "/ffmap/geomap.html"
+  url_graph: "/ffmap/graph.html"
+  url_nodelist: "/ffmap/list.html"
+  url_mailman: "http://toppoint.de/cgi-bin/mailman/listinfo/freifunk"
 
   # Mail Contacts
-  mail_info: "info@entenhausen.freifunk.net"
-  mail_keys: "keys@entenhausen.freifunk.net"
-  mail_discussion: "discussion@entenhausen.freifunk.net"
+  mail_info: "freifunk@in-kiel.de"
+  mail_keys: "freifunk@in-kiel.de"
+  mail_discussion: "freifunk@in-kiel.de"
 
   # Other Contacts
-  sip: ["space@sip.ffeh", "space@10.254.254.254"] # Optional
-  twitter: "FreifunkEntenhausen" # Optional
-  irc: "#ffeh"
+  #sip: ["space@sip.ffeh", "space@10.254.254.254"] # Optional
+  #twitter: "FreifunkEntenhausen" # Optional
+  irc: "#ffki"
 
   # GPS
-  geo_lat: 53.869722
-  geo_lon: 10.686389
+  geo_lat: 54.3216753
+  geo_lon: 10.1371858
 
 firmware:
-  base: "http://luebeck.freifunk.net/firmware/stable/"
+  base: "http://freifunk.in-kiel.de/firmware/stable/"
 
   # URL to the site repo (gitweb,github...)
   gluon_site: "https://github.com/freifunk-entenhausen/site-ffeh"
   # Path to local checkout of the site repo
-  gluon_site_dir: "../gluon/site"
+  gluon_site_dir: "/opt/site-ffki"
