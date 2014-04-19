@@ -36,15 +36,15 @@ layout: base
     <p>
     Freifunk ist ein Projekt, das versucht ein stadtweites Datennetz auf Basis von WLAN-Routern aufzubauen.
     Dieses Netz soll eine freie Kommunikation innerhalb der ganzen Stadt und, mithilfe von Peerings zu anderen Städten, auch überregional ermöglichen.
-    Um dies zu Erreichen, werden Freifunknoten (das sind die Router mit den Antennen), von freiwilligen an vielen Orten in der Stadt betrieben.
+    Um dies zu erreichen, werden Freifunknoten (das sind die Router mit den Antennen), von Freiwilligen an vielen Orten in der Stadt betrieben.
     Jedes WLAN-fähige Gerät, also beispielsweise Handy oder Notebook, kann sich in der Nähe eines solchen Knotens mit dem Netz verbinden und darüber mit anderen Teilnehmern kommunizieren.
     Auch ein Zugang ins Internet steht meistens zur Verfügung.
     </p>
   </div>
 
   <div class="four columns">
-    {% for post in site.posts limit: 8 %}
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    {% for post in site.posts limit: 4 %}
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <p>{{ post.teaser }}</p>
     <p class="postdate"><em>{{ post.date | date: "%B %d, %Y" }}</em></p>
     {% endfor %}
