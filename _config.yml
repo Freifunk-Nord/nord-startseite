@@ -29,6 +29,6 @@ firmware:
   base: "http://freifunk.in-kiel.de/firmware/stable/"
 
   # URL to the site repo (gitweb,github...)
-  gluon_site: "https://github.com/freifunk-entenhausen/site-ffeh"
+  gluon_site: "https://github.com/sargon/site-ffki"
   # Path to local checkout of the site repo
   gluon_site_dir: "/opt/site-ffki"
