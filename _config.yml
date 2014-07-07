@@ -2,7 +2,9 @@ url: http://freifunk.in-kiel.de/
 
 community:
   # Metadata
-  name: "Kiel"
+  name: "Freifunk Kiel"
+  meta: "Freifunk Nord"
+  country: "DE"
 
   # Custom URLs
   url_wiki:  "/wiki"
@@ -17,9 +19,9 @@ community:
   mail_discussion: "freifunk@in-kiel.de"
 
   # Other Contacts
-  #sip: ["space@sip.ffeh", "space@10.254.254.254"] # Optional
-  #twitter: "FreifunkEntenhausen" # Optional
-  irc: "#ffki"
+  #sip: ["space@sip.ffki"] # Optional
+  twitter: "ff_Kiel" # Optional
+  irc: "ircs://irc.hackint.net/%23ffki"
 
   # GPS
   geo_lat: 54.3216753
