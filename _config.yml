@@ -9,7 +9,7 @@ community:
   url_geomap: "/ffmap/geomap.html"
   url_graph: "/ffmap/graph.html"
   url_nodelist: "/ffmap/list.html"
-  url_mailman: "http://toppoint.de/cgi-bin/mailman/listinfo/freifunk"
+  url_mailman: "http://lists.in-kiel.de/cgi-bin/mailman/listinfo/freifunk"
 
   # Mail Contacts
   mail_info: "freifunk@in-kiel.de"
