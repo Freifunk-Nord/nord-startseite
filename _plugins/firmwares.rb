@@ -3,11 +3,13 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
-FIRMWARE_REGEX = /^gluon-((\w+)-([\d.]+)-([\w-]+)).bin$/
-#firmware_base = "http://luebeck.freifunk.net/firmware/stable/"
-HWREV_REGEX = /^(.+)-v(\d+)$/
+FIRMWARE_REGEX = /^gluon-((\w+)-([\d\.]+)-([\w-]+)).bin$/
+HWREV_REGEX = /^(.+)-(v|rev-)(\w+)$/
 
 MODELMAP = {
+  "d-link-dir-615"         => { :make => "D-Link", :model => "DIR 615" },
+  "d-link-dir-825"         => { :make => "D-Link", :model => "DIR 825" },
+
   "ubiquiti-bullet-m"        => { :make => "Ubiquiti", :model => "Bullet M, Nanostation Loco M" },
   "ubiquiti-unifi"           => { :make => "Ubiquiti", :model => "UniFi AP (LR)" },
   "ubiquiti-nanostation-m"   => { :make => "Ubiquiti", :model => "Nanostation M" },
@@ -68,15 +70,6 @@ module Jekyll
 
   class FirmwareListGenerator < Generator
     def generate(site)
-      class << site
-        attr_accessor :firmwares
-        def site_payload
-          result = super
-          result["site"]["firmwares"] = self.firmwares
-          result
-        end
-      end
-
       def get_files(url)
         uri = URI.parse(url)
         response = Net::HTTP.get_response uri
@@ -106,7 +99,7 @@ module Jekyll
 
           fw.model.match(HWREV_REGEX) do |m|
             fw.model = m[1]
-            fw.hwrev = m[2]
+            fw.hwrev = m[3]
           end
         end
 
@@ -142,7 +135,8 @@ module Jekyll
         end ]
       end
 
-      site.firmwares = makes
+      page = site.pages.detect {|page| page.name == 'firmware.html'}
+      page.data['makes'] = makes
     end
   end
 end

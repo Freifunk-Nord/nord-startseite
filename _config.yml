@@ -13,7 +13,7 @@ community:
 
   # Mail Contacts
   mail_info: "freifunk@in-kiel.de"
-  mail_keys: "freifunk@in-kiel.de"
+  mail_keys: "freifunk-keys@in-kiel.de"
   mail_discussion: "freifunk@in-kiel.de"
 
   # Other Contacts
@@ -27,8 +27,21 @@ community:
 
 firmware:
   base: "http://freifunk.in-kiel.de/firmware/stable/"
+  type: "gluon"
 
   # URL to the site repo (gitweb,github...)
   gluon_site: "https://github.com/sargon/site-ffki"
   # Path to local checkout of the site repo
   gluon_site_dir: "/opt/site-ffki/"
+
+tld:
+  label: "ffki"
+  ns:
+    - "10.116.128.1"
+    - "fda1:384a:74de:4242::1"
+    - "10.116.136.1"
+    - "fda1:384a:74de:4242::5"
+    - "10.116.144.1"
+    - "fda1:384a:74de:4242::8"
+    - "10.116.152.1"
+

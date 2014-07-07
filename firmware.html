@@ -13,14 +13,13 @@ layout: base
 <div class="row">
   <div class="eight columns">
     <p>Hier findest du eine Liste unterstützter Router-Modelle und ihre entsprechenden Firmwares.</p>
-
   </div>
 </div>
 
 <div class="row">
   <div class="eight columns">
-    {% for makes in site.firmwares %}
-    <h2>{{ makes[0] }}</h2>
+    {% for make in page.makes %}
+    <h2>{{ make[0] }}</h2>
     <table>
       <thead>
         <tr>
@@ -30,7 +29,7 @@ layout: base
         </tr>
       </thead>
       <tbody>
-        {% for model in makes[1] %}
+        {% for model in make[1] %}
         <tr>
           <td>
             {{ model[0] }}
@@ -56,18 +55,20 @@ layout: base
       </tbody>
     </table>
     {% endfor %}
-
     <p>
     Die {{ site.community.name }}er Freifunk-Firmware ist Freie Software. Sie basiert auf dem <a href="https://github.com/freifunk-gluon/gluon">Gluon-Framework</a> und <a href="https://openwrt.org/">OpenWRT</a> und darf nach den Bestimmungen der <a href="https://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License</a> weiterverteilt und verändert werden.
     </p>
     <p>Das Gluon-Site-Repository befindet sich unter <a href="{{ site.firmware.gluon_site }}">{{ site.firmware.gluon_site }}</a>.</p>
   </div>
   <div class="four columns panel">
-    <h5>Hardware Versionen</h5>
-    <p>Bei einigen Modellen gibt es mehrere Hardware Versionen. Ist dies bei deinem Modell der Fall, musst du die entsprechende Firmware anhand des Typenschilds unter dem Knoten auswählen.</p>
+    <h5>Hardware-Versionen</h5>
+    <p>Bei einigen Modellen gibt es mehrere Hardware-Versionen. Ist dies bei deinem Modell der Fall, musst du die entsprechende Firmware anhand des Typenschilds unter dem Knoten auswählen.</p>
     <p>Dieses Bild zeigt das Typenschild eines TP-Link TL-WR1043ND. Die Versionsangabe ist gelb markiert:</p>
     <a href="images/hardwareversion.png">
       <img src="images/hardwareversion.png" />
     </a>
+  </div>
+  <div class="four columns panel">
+    <p>Sämtliche Firmware-Dateien findest du unter <a href="{{ site.firmware.base }}">{{ site.firmware.base }}</a>.</p>
   </div>
 </div>
