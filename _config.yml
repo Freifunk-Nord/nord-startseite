@@ -31,4 +31,4 @@ firmware:
   # URL to the site repo (gitweb,github...)
   gluon_site: "https://github.com/sargon/site-ffki"
   # Path to local checkout of the site repo
-  gluon_site_dir: "/opt/site-ffki"
+  gluon_site_dir: "/opt/site-ffki/"
