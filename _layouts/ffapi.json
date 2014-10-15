@@ -12,27 +12,27 @@
     "lon": {{ site.community.geo_lon }}
   },
   "contact": {
+    {% if site.community contains 'sip' %}"phone": "{{ site.community.sip }}",{% endif %}
+    {% if site.community contains 'twitter' %}"twitter": "@{{ site.community.twitter }}",{% endif %}
     "email": "{{ site.community.mail_info }}",
-    "irc": "irc://hackint/%23{{ site.community.irc }}",
+    "irc": "irc://irc.hackint.org/%23{{ site.community.irc }}",
     "ml": "{{ site.community.mail_discussion }}"
-{% if site.community contains 'sip' %}    ,"phone": "{{ site.community.sip | first }}" {% endif %}
-{% if site.community contains 'twitter' %}    ,"twitter": "@{{ site.community.twitter | first }}" {% endif %}
   },
   "nodeMaps": [
     {
-      "url": "{{ site.url }}{{ site.baseurl }}ffmap/geomap.html",
+      "url": "{{ site.community.url_geomap }}",
       "interval": "300",
       "technicalType": "ffmap",
       "mapType": "geographical"
     },
     {
-      "url": "{{ site.url }}{{ site.baseurl }}ffmap/graph.html",
+      "url": "{{ site.community.url_graph }}",
       "interval": "300",
       "technicalType": "ffmap",
       "mapType": "structural"
     },
     {
-      "url": "{{ site.url }}{{ site.baseurl }}ffmap/list.html",
+      "url": "{{ site.community.url_nodelist }}",
       "interval": "300",
       "technicalType": "ffmap",
       "mapType": "list/status"
@@ -40,15 +40,15 @@
   ],
   "techDetails": {
     "firmware": {
-      "url": "{{ site.url }}{{ site.baseurl }}mitmachen.html"
+      "url": "{{ site.community.url_firmware }}"
       "name": "{{ site.firmware.type }}"
     },
-{% if site contains 'tld' && site.tld contains 'label' %}    "tld": {
+    {% if site contains 'tld' && site.tld contains 'label' %}"tld": {
       "domainname": "{{ site.tld.label }}",
-{% if site contains 'tld' && site.tld contains 'ns' %}      "nameserver": [
+      {% if site contains 'tld' && site.tld contains 'ns' %}"nameserver": [
         "{{ site.tld.ns }}"
-      ] {% endif %}
-    }, {% endif %}
+      ]{% endif %}
+    },{% endif %}
     "networks": {
       "ipv6": [
         {

@@ -2,16 +2,20 @@ url: http://freifunk.in-kiel.de/
 
 community:
   # Metadata
-  name: "Freifunk Kiel"
+  name: "Kiel"
   meta: "Freifunk Nord"
   country: "DE"
 
   # Custom URLs
-  url_wiki:  "/wiki"
-  url_geomap: "/ffmap/geomap.html"
-  url_graph: "/ffmap/graph.html"
-  url_nodelist: "/ffmap/list.html"
+  url_wiki:  "http://wiki.freifunk.in-kiel.de/"
+
+  url_geomap: "http://map.freifunk.in-kiel.de/"
+  url_graph: "http://graph.freifunk.in-kiel.de/"
+  url_nodelist: "http://alfred.freifunk.in-kiel.de/"
+
   url_mailman: "http://lists.in-kiel.de/cgi-bin/mailman/listinfo/freifunk"
+
+  url_firmware: "http://freifunk.in-kiel.de/firmware.html"
 
   # Mail Contacts
   mail_info: "freifunk@in-kiel.de"
@@ -21,11 +25,11 @@ community:
   # Other Contacts
   #sip: ["space@sip.ffki"] # Optional
   twitter: "ff_Kiel" # Optional
-  irc: "ircs://irc.hackint.net/%23ffki"
+  irc: "ffki"
 
   # GPS
-  geo_lat: 54.3216753
-  geo_lon: 10.1371858
+  geo_lat: 54.4
+  geo_lon: 10.1
 
 firmware:
   base: "http://freifunk.in-kiel.de/firmware/stable/"
