@@ -14,7 +14,7 @@
 ----------------------------------------- */
 
 div.header {
-  background: transparent url(../images/ffki-logo.png) no-repeat bottom right;
+  background: transparent url(../images/ffki-logo.svg) scroll no-repeat bottom right / auto 100%;
   min-height: 110px;
 }
 
