@@ -1,0 +1,81 @@
+{
+  "name": "Freifunk Kiel",
+  "url": "http://freifunk.in-kiel.de",
+  "location": {
+    "city": "Kiel",
+    "country": "DE",
+    "lat": 54.32166,
+    "lon": 10.13832
+  },
+  "contact": {
+    "twitter": "@ff_Kiel",
+    "email": "freifunk@in-kiel.de",
+    "irc": "irc://irc.hackint.org/%23ffki",
+    "ml": "freifunk@in-kiel.de"
+  },
+  "state": {
+    "nodes": 187,
+    "focus": [
+      "Public Free Wifi",
+      "Local services and content",
+      "Free internet access"
+    ],
+    "lastchange": "2014-12-23T22:09:08.757Z"
+  },
+  "nodeMaps": [
+    {
+      "url": "http://map.freifunk.in-kiel.de/",
+      "interval": "300",
+      "technicalType": "ffmap",
+      "mapType": "geographical"
+    },
+    {
+      "url": "http://graph.freifunk.in-kiel.de/",
+      "interval": "300",
+      "technicalType": "ffmap",
+      "mapType": "structural"
+    },
+    {
+      "url": "http://map.freifunk.in-kiel.de/list.html",
+      "interval": "300",
+      "technicalType": "ffmap",
+      "mapType": "list/status"
+    },
+    {
+      "url": "http://alfred.freifunk.in-kiel.de/",
+      "interval": "300",
+      "technicalType": "ffmap",
+      "mapType": "list/status"
+    }
+  ],
+  "techDetails": {
+    "firmware": {
+      "name": "gluon",
+      "url": "http://freifunk.in-kiel.de/firmware.html"
+    },
+    "dns": [
+      {
+        "domainname": "ffki.",
+        "nameserver": [
+          "10.116.128.1",
+          "fda1:384a:74de:4242::1",
+          "10.116.136.1",
+          "fda1:384a:74de:4242::5",
+          "10.116.144.1",
+          "fda1:384a:74de:4242::8",
+          "10.116.152.1"
+        ]
+      }
+    ],
+    "routing": [
+      "batman-adv"
+    ],
+    "updatemode": [
+      "autoupdate"
+    ],
+    "legals": [
+      "vpninternational"
+    ]
+  },
+  "api": "0.4.4"
+}
