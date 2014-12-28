@@ -40,7 +40,7 @@
   ],
   "techDetails": {
     "firmware": {
-      "url": "{{ site.community.url_firmware }}"
+      "url": "{{ site.community.url_firmware }}",
       "name": "{{ site.firmware.type }}"
     },
     {% if site contains 'tld' && site.tld contains 'label' %}"tld": {
