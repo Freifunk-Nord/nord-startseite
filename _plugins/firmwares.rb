@@ -10,6 +10,8 @@ MODELMAP = {
   "d-link-dir-615"         => { :make => "D-Link", :model => "DIR 615" },
   "d-link-dir-825"         => { :make => "D-Link", :model => "DIR 825" },
 
+  "linksys-wrt160nl"       => { :make => "Linksys", :model => "WRT160NL" },
+
   "ubiquiti-bullet-m"        => { :make => "Ubiquiti", :model => "Bullet M, Nanostation Loco M" },
   "ubiquiti-unifi"           => { :make => "Ubiquiti", :model => "UniFi AP (LR)" },
   "ubiquiti-nanostation-m"   => { :make => "Ubiquiti", :model => "Nanostation M" },
