@@ -37,6 +37,7 @@ firmware:
 
   # URL to the site repo (gitweb,github...)
   gluon_site: "http://git.freifunk.in-kiel.de/ffki-site/"
+
   # Path to local checkout of the site repo
   gluon_site_dir: "/opt/site-ffki/"
 
@@ -50,4 +51,3 @@ tld:
     - "10.116.144.1"
     - "fda1:384a:74de:4242::8"
     - "10.116.152.1"
-
