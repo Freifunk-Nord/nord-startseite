@@ -3,13 +3,14 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
-FIRMWARE_REGEX = /^gluon-((\w+)-([\d\.]+)-([\w-\.]+)).bin$/
+FIRMWARE_REGEX = /^gluon-((\w+)-([\d\.]+)-([\w-]+)).bin$/
 HWREV_REGEX = /^(.+)-(v|rev-)([\w\.]+)$/
 
 MODELMAP = {
   "buffalo-wzr-hp-ag300h-wzr-600dhp"         => { :make => "Buffalo", :model => "WZR-HP-AG300H/600DHP" },
   "buffalo-wzr-hp-g450h"                     => { :make => "Buffalo", :model => "WZR-HP-G450H" },
 
+  "d-link-dir-615"           => { :make => "D-Link", :model => "DIR 615" },
   "d-link-dir-825"           => { :make => "D-Link", :model => "DIR 825" },
 
   "linksys-wrt160nl"         => { :make => "Linksys", :model => "WRT160NL" },
