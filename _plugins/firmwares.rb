@@ -97,8 +97,9 @@ module Jekyll
         end
       end
 
-      firmware_base = site.config['firmware']['base']
-
+      #firmware_base = site.config['firmware']['base']
+      firmware_base = "http://gluon.ffki.de/firmware/stable/"
+      
       factory = get_files(firmware_base + "factory/")
       sysupgrade = get_files(firmware_base + "sysupgrade/")
 
