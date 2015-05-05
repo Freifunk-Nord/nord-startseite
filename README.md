@@ -20,7 +20,8 @@ Dependencies
 
 On Ubuntu/Debian:
 
-    sudo apt-get install jekyll ruby-nokogiri
+    sudo apt-get install ruby-nokogiri
+    sudo gem install json jekyll
 
 Customization
 -------------
