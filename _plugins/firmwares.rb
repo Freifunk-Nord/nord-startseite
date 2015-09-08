@@ -3,8 +3,12 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
-FIRMWARE_REGEX = /^gluon-((\w+)-([\d\.]+)-([\w-]+))(\.0)*\.bin$/
-HWREV_REGEX = /^(.+)-(v|rev-)([\w\.]+)$/
+FIRMWARE_REGEX = /^gluon-((\w+)-([\d\.]+)-([\w-]+))(\.0)*\.(?:bin|vdi|gz|vmdk|manifest)$/
+HWREV_REGEX = /^(.+)-(v|rev-|-kvm|-virtualbox|-vmware)([\w\.]+)$/
+#generic.img.gz
+#generating gluon-ffki-0.7-x86-kvm.img.gz
+#generating gluon-ffki-0.7-x86-virtualbox.vdi
+#generating gluon-ffki-0.7-x86-vmware.vmdk
 
 MODELMAP = {
   "buffalo-wzr-hp-ag300h-wzr-600dhp"         => { :make => "Buffalo", :model => "WZR-HP-AG300H/600DHP" },
@@ -93,6 +97,7 @@ module Jekyll
         doc.css('a').map do |link|
           link.attribute('href').to_s
         end.uniq.sort.select do |href|
+          puts "part "+href
           href.match(FIRMWARE_REGEX)
         end
       end
@@ -127,7 +132,6 @@ module Jekyll
 
         href.match(FIRMWARE_REGEX) do |m|
           basename = m[1].chomp "-sysupgrade"
-
           if firmwares.has_key? basename
             firmwares[basename].sysupgrade = path
           end
@@ -145,7 +149,9 @@ module Jekyll
       makes.each do |k,models|
         makes[k] = Hash[ models.map do |k,v|
           [ModelDB.model(k) || k, v.sort_by do |f|
-            f.hwrev
+            if k.nil? then nil else 
+              f.hwrev
+            end
           end
           ]
         end ]
