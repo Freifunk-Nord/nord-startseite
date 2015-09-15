@@ -9,6 +9,7 @@ FIRMWARE_VERSION = '0.7.1'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 FIRMWARE_BASE = 'http://gluon.ffki.de/firmware/stable/'
+FIRMWARE_MIRROR = 'http://freifunk.discovibration.de/firmware/firmware-0.7.1/'
 
 GROUPS = {
   "Allnet" => {
@@ -157,6 +158,7 @@ module Jekyll
           result = super
           result["site"]["firmwares"] = self.firmwares
           result["site"]["firmware_version"] = FIRMWARE_VERSION
+          result["site"]["firmware_mirror"] = FIRMWARE_MIRROR
           result["site"]["community_tld"] = COMMUNITY_TLD
           result
         end
