@@ -1,8 +1,8 @@
-url: http://freifunk.in-kiel.de/
+url: http://freifunk.localhost/
 
 community:
   # Metadata
-  name: "Kiel"
+  name: "Nord"
   meta: "Freifunk Nord"
   country: "DE"
 
@@ -13,9 +13,11 @@ community:
   url_graph: "http://graph.freifunk.in-kiel.de/"
   url_nodelist: "http://alfred.freifunk.in-kiel.de/"
 
-  url_mailman: "http://lists.in-kiel.de/cgi-bin/mailman/listinfo/freifunk"
+  url_mailman: "http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net"
 
   url_firmware: "http://freifunk.in-kiel.de/firmware.html"
+
+  url_blog_cms: "https://github.com/ffnord/ffki-blog"
 
   # Mail Contacts
   mail_info: "freifunk@in-kiel.de"
@@ -25,32 +27,27 @@ community:
   # Other Contacts
   #sip: ["space@sip.ffki"] # Optional
   twitter: "ff_Kiel" # Optional
-  irc: "ffki"
+  irc: "ffnord"
 
   # GPS
-  geo_lat: 54.4
-  geo_lon: 10.1
+  geo_lat: 54.0
+  geo_lon: 10.0
 
 firmware:
   #base: "https://freifunk.in-kiel.de/firmware/stable/"
-  #base: "http://localhost/freifunk/firmware/ffki/0.7.1/"
+  base: "http://localhost/freifunk/firmware/ffki/0.7.1/"
   #base: "http://gluon.ffki.de/firmware/stable/"
-  base: "http://freifunk.discovibration.de/firmware/firmware-0.7.1/"
+  #base: "http://freifunk.discovibration.de/firmware/firmware-0.7.1/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
-  gluon_site: "http://git.freifunk.in-kiel.de/ffki-site/"
+  gluon_site: "https://github.com/ffnord/site-ffnord/"
 
   # Path to local checkout of the site repo
-  gluon_site_dir: "/opt/site-ffki/"
+  gluon_site_dir: "/opt/site-ffnord/"
 
 tld:
-  label: "ffki"
+  label: "ffnord"
   ns:
-    - "10.116.128.1"
-    - "fda1:384a:74de:4242::1"
-    - "10.116.136.1"
-    - "fda1:384a:74de:4242::5"
-    - "10.116.144.1"
-    - "fda1:384a:74de:4242::8"
-    - "10.116.152.1"
+    - "10.116.168.1"
+    - "fda1:384a:74de:4242::2"
