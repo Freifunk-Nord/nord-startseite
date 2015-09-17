@@ -36,7 +36,7 @@ body{
 }
 </style>
 </head>
-<body><a href="http://www.knotenkarte.de" target="_blank">
+<body><a href="http://mesh.ffki.de/" target="_blank">
 <div class="num"><NUM_NODES></div>
 <div class="onl">knoten online</div></a>
 </body>
