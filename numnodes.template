@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+*{
+    font-weight: bold;
+    font-size: 34px;
+    margin:0;
+    padding: 0px;
+	border: 0px none;
+	vertical-align: baseline;
+	font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+div{
+   width: 116px;
+}
+div, a{
+   text-align: center;
+   color: white;
+   text-shadow: 1px 1px 3px black,
+	 1px -1px 3px black,
+	 -1px 1px 3px black,
+	 -1px -1px 3px black;
+}
+a{
+	text-decoration: none;
+}
+body{
+ background: url('images/knotenback.png');
+ background-repeat: no-repeat;
+}
+.num{
+	margin-top: 20px;
+}
+.onl{
+	font-size:13px;
+}
+</style>
+</head>
+<body><a href="http://www.knotenkarte.de" target="_blank">
+<div class="num"><NUM_NODES></div>
+<div class="onl">knoten online</div></a>
+</body>
+</html>
