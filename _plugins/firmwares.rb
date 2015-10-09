@@ -99,22 +99,25 @@ GROUPS = {
       "UniFi AP Pro",
       "UniFi",
       "UniFiAP Outdoor",
+      "Picostation M",
+      "Rocket M",
     ],
     extract_rev: lambda { |model, suffix|
       rev = /^(.*?)(?:-sysupgrade)?\.bin$/.match(suffix)[1]
 
       if rev == '-xw'
         'XW'
-      elsif model == 'Nanostation M' or model == 'Bullet M'
+      elsif model == 'Nanostation M' or model == 'Loco M' or model == 'Bullet M'
         'XM'
       else
         nil
       end
     },
     transform_label: lambda { |model|
-      if model == 'Bullet M' then
-        'Bullet M, Loco M'
-      elsif model == 'UniFi' then
+      #if model == 'Bullet M' then
+      #  'Bullet M, Loco M'
+      #els
+      if model == 'UniFi' then
         'UniFi AP (LR)'
       else
         model
@@ -202,6 +205,7 @@ module Jekyll
       firmwares = Hash[GROUPS.collect_concat { |group, info|
         info[:models].collect do |model|
           basename = FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-' + sanitize_model_name(group + ' ' + model)
+          #print basename
           label = if info[:transform_label] then
                     info[:transform_label].call model
                   else
@@ -230,26 +234,34 @@ module Jekyll
 
       factory.each do |href|
         basename = find_prefix href
-        suffix = href[basename.length..-1]
-        info = firmwares[basename]
+        if basename.nil? then
+          puts "error in "+href
+        else
+          suffix = href[basename.length..-1]
+          info = firmwares[basename]
 
-        hwrev = info[:extract_rev].call info[:model], suffix
+          hwrev = info[:extract_rev].call info[:model], suffix
 
-        fw = info[:revisions][hwrev]
-        fw.factory = FIRMWARE_BASE + "factory/" + href
-        info[:revisions][hwrev] = fw
+          fw = info[:revisions][hwrev]
+          fw.factory = FIRMWARE_BASE + "factory/" + href
+          info[:revisions][hwrev] = fw
+        end
       end
 
       sysupgrade.each do |href|
         basename = find_prefix href
-        suffix = href[basename.length..-1]
-        info = firmwares[basename]
+        if basename.nil? then
+          puts "error in "+href
+        else
+          suffix = href[basename.length..-1]
+          info = firmwares[basename]
 
-        hwrev = info[:extract_rev].call info[:model], suffix
+          hwrev = info[:extract_rev].call info[:model], suffix
 
-        fw = info[:revisions][hwrev]
-        fw.sysupgrade = FIRMWARE_BASE + "sysupgrade/" + href
-        info[:revisions][hwrev] = fw
+          fw = info[:revisions][hwrev]
+          fw.sysupgrade = FIRMWARE_BASE + "sysupgrade/" + href
+          info[:revisions][hwrev] = fw
+        end
       end
 
       firmwares.delete_if { |k, v| v[:revisions].empty? }
