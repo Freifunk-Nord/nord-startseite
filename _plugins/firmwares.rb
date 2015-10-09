@@ -3,7 +3,7 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
-COMMUNITY_TLD = 'ffki'
+COMMUNITY_TLD = 'ffnord'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
 FIRMWARE_VERSION = '0.7.2'
 
