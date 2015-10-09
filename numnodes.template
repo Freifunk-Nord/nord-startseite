@@ -30,15 +30,16 @@ body{
  background-repeat: no-repeat;
 }
 .num{
-	margin-top: 20px;
+	margin-top: 22px;
+	line-height: 41px;
 }
 .onl{
 	font-size:13px;
 }
 </style>
 </head>
-<body><a href="http://mesh.ffki.de/" target="_blank">
+<body><a href="http://mesh.ffnord.net/" target="_blank">
 <div class="num"><NUM_NODES></div>
-<div class="onl">knoten online</div></a>
+<div class="onl">Knoten online</div></a>
 </body>
 </html>
