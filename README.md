@@ -1,7 +1,11 @@
-ffnord startseite
-====================
+Startseite der Community FreiFunk Nord.
+=======================================
 
-Generic Homepage for FreiFunk Nord.
+Webseite: http://www.ffnord.net/blog.html
+
+Um einen Blog Beitrag zu erstellen brauchst du keine weitere Software. Das Blog kannst du **direkt im Browser [hier auf Github](https://github.com/ffnord/nord-blog) bearbeiten**. 
+
+Um die Hauptseiten zu bearbeiten, clone dises Repository und installiere ein paar Abhngigkeiten, dann kannst du auch bei dir lokal eine Kopie erstellen und testen:
 
 Dependencies
 ------------
@@ -48,7 +52,7 @@ to have the data transferred without deleting independent contributions.
 Site
 ----
 
-The site doesn't run in a subdirectory, it only works correctly if it is called via its own (sub)domain, so you have to configure your webserver to route a domain on the site-path, otherwise the links to stylesheets, images,.. are not implemented correctly, for example in apache add this to your sites-enabled:
+*The site doesn't run in a subdirectory*, it only works correctly if it is called via its own (sub)domain, so you have to configure your webserver to route a domain on the site-path, otherwise the links to stylesheets, images,.. are not implemented correctly, for example in apache add this to your sites-enabled:
 
 	<VirtualHost *:80>
 		ServerName freifunk.localhost
