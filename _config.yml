@@ -20,9 +20,9 @@ community:
   url_blog_cms: "https://github.com/ffnord/ffki-blog"
 
   # Mail Contacts
-  mail_info: "freifunk@in-kiel.de"
-  mail_keys: "freifunk-keys@in-kiel.de"
-  mail_discussion: "freifunk@in-kiel.de"
+  mail_info: "ffnord@freifunk.net"
+  mail_keys: ""
+  mail_discussion: "ffnord@freifunk.net"
 
   # Other Contacts
   #sip: ["space@sip.ffki"] # Optional
