@@ -7,17 +7,17 @@ community:
   country: "DE"
 
   # Custom URLs
-  url_wiki:  "http://wiki.freifunk.in-kiel.de/"
+  url_wiki:  "http://wiki.freifunk.net/Freifunk_Nord/"
 
-  url_geomap: "http://map.freifunk.in-kiel.de/"
-  url_graph: "http://graph.freifunk.in-kiel.de/"
-  url_nodelist: "http://alfred.freifunk.in-kiel.de/"
+  url_geomap: "http://mesh.nord.freifunk.net/"
+  url_graph: "http://mesh.nord.freifunk.net/"
+  url_nodelist: "http://nord.freifunk.net/numnodes.html/"
 
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net"
 
-  url_firmware: "http://freifunk.in-kiel.de/firmware.html"
+  url_firmware: "http://nord.freifunk.net/firmware.html"
 
-  url_blog_cms: "https://github.com/ffnord/ffki-blog"
+  url_blog_cms: "https://github.com/ffnord/nord-blog"
 
   # Mail Contacts
   mail_info: "ffnord@freifunk.net"
@@ -26,7 +26,7 @@ community:
 
   # Other Contacts
   #sip: ["space@sip.ffki"] # Optional
-  twitter: "ff_Kiel" # Optional
+  twitter: "FreifunkNord" # Optional
   irc: "ffnord"
 
   # GPS
@@ -50,5 +50,5 @@ firmware:
 tld:
   label: "ffnord"
   ns:
-    - "10.116.168.1"
-    - "fda1:384a:74de:4242::2"
+    - "10.187.160.1"
+    - "2a03:2267:4e6f:7264::01"
