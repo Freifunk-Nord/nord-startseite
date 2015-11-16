@@ -24,6 +24,7 @@ div.header {
   max-height: 330px;
   margin-bottom:10px;
   background-repeat:no-repeat;
+  max-width: 100%;
 }
 
 #video_starter{
@@ -43,6 +44,24 @@ div.header {
   div.header {
     background: transparent !important;
     min-height: 0px;
+  }
+  .teaser > div > div.eight.columns{
+    max-height:305px;
+  }
+  #flash_placeholder {
+    background-size:100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .teaser > div > div.eight.columns{
+    max-height:250px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .teaser > div > div.eight.columns{
+    max-height:200px;
   }
 }
 
