@@ -11,7 +11,7 @@ community:
 
   url_geomap: "http://mesh.nord.freifunk.net/"
   url_graph: "http://mesh.nord.freifunk.net/"
-  url_nodelist: "http://nord.freifunk.net/numnodes.html/"
+  url_nodelist: "http://nord.freifunk.net/numnodes.html"
 
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net"
 
