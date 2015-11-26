@@ -8,7 +8,7 @@ layout: base
   <div class="row">
     <div class="eight columns">
       <div id="flash_placeholder">
-        <a id="video_starter" title="2x klicken zum Starten" href="#video" onclick="add_video();return false" onmouseover="add_video()">Start Video (benötigt Javascript)</a>
+        <a id="video_starter" title="2x klicken zum Starten" href="#video" onclick="add_video();return false" onclick="add_video()">Start Video (benötigt Javascript)</a>
         <script>
             function add_video(){
                 v='<video poster="images/freifunk_verbindet_sd.png" style="max-height:336px;width: 100%; height: 100%" controls>';
