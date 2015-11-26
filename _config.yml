@@ -9,13 +9,13 @@ community:
   # Custom URLs
   url_wiki:  "http://wiki.freifunk.net/Freifunk_Nord/"
 
-  url_geomap: "http://mesh.nord.freifunk.net/"
-  url_graph: "http://mesh.nord.freifunk.net/"
-  url_nodelist: "http://nord.freifunk.net/numnodes.html/"
+  url_geomap: "http://mesh.ffnord.net/"
+  url_graph: "http://mesh.ffnord.net/"
+  url_nodelist: "http://nord.freifunk.net/numnodes.html"
 
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net"
 
-  url_firmware: "http://nord.freifunk.net/firmware.html"
+  url_firmware: "http://ffnord.net/firmware.html"
 
   url_blog_cms: "https://github.com/ffnord/nord-blog"
 
@@ -42,10 +42,10 @@ firmware:
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
-  gluon_site: "https://github.com/ffnord/site-ffnord/"
+  gluon_site: "https://github.com/ffnord/site-nord/"
 
   # Path to local checkout of the site repo
-  gluon_site_dir: "/opt/site-ffnord/"
+  gluon_site_dir: "/var/www/html/ffnord"
 
 tld:
   label: "ffnord"
