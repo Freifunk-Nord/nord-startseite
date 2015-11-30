@@ -1,5 +1,7 @@
 url: http://freifunk.localhost/
 
+destination: build
+
 community:
   # Metadata
   name: "Nord"
