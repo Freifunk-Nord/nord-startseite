@@ -1,0 +1,42 @@
+{
+  "name": "Freifunk Nord",
+  "url": "https://nord.freiunk.net",
+  "location": {
+    "city": "Schleswig-Holstein",
+    "country": "DE",
+    "lat": 54.08517342088679,
+    "lon": 9.865722656249998
+  },
+  "contact": {
+    "email": "ffnord@freifunk.net",
+    "twitter": "@FreifunkNord"
+  },
+  "state": {
+    "description": "Freifunk Nord ist eine Meta-Community für alle Freifunker in Schleswig-Holstein die nicht im Einzugsbereich der großen Städte leben.",
+    "focus": [
+      "Public Free Wifi",
+      "Free internet access"
+    ],
+    "lastchange": "2015-12-04T07:29:47.574Z"
+  },
+  "nodeMaps": [
+    {
+      "url": "http://mesh.nord.freiunk.net/",
+      "interval": "2",
+      "technicalType": "meshviewer",
+      "mapType": "geographical"
+    }
+  ],
+  "techDetails": {
+    "firmware": {
+      "url": "https://nord.freiunk.net/firmware.html",
+      "vpnaccess": "automatic"
+    },
+    "legals": [
+      "vpninternational"
+    ],
+    "routing": [],
+    "updatemode": []
+  },
+  "api": "0.4.10"
+}
