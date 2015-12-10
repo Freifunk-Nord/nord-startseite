@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Freifunk Nord</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="/stylesheets/app.css">
+
+  <script src="/javascripts/modernizr.foundation.js"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <!-- Header and Nav -->
+
+
+  <div class="row header">
+    <div class="nine columns">
+      <h1>
+        Freifunk Nord
+      </h1>
+
+      <ul class="link-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/mitmachen.html">Mitmachen!</a></li>
+        <li><a href="/firmware.html">Firmware</a></li>
+        <li><a href="/treffen.html">Treffen</a></li>
+        <li><a href="http://wiki.freifunk.net/Freifunk_Nord/">Wiki</a></li>
+        <li><a href="https://forum.freifunk.net/c/meta-community/ffnord" target="_blank">Forum</a></li>
+        <li><a href="https://kiwiirc.com/client/irc.eu.hackint.org:+9999/ffnord?nick=ffnord-besucher" target="_blank">Webchat</a></li>
+      </ul>
+    </div>
+    <style type="text/css">
+      .numnodes{
+        position:absolute;margin-left:-120px; margin-top:24px;
+        width: 118px;
+        height: 92px;
+      }
+      @media only screen and (max-width: 870px) {
+        .numnodes{
+          display: none;
+        }
+      } 
+    </style>
+    <iframe class="numnodes" src="/numnodes.html" border="0" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+  </div>
+
+  <!-- End Header and Nav -->
+
+  <div class="heading">
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Firmware</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="eight columns">
+<h2>Download der Firmware</h2>
+    <p>Bei fragen, komme in den IRC Chat hackint.org #ffnord oder in unseren <a href="https://kiwiirc.com/client/irc.eu.hackint.org:+9999/ffnord?nick=ffnord-besucher">Webchat</a>.</p>
+    <p>Hier findest du eine Liste unterstützter Router-Modelle und ihre entsprechenden Firmware Images.</p>
+    <p><b>Achtung!</b> Beim Umstieg von einer anderen Firmware aus einer anderen Community unbedingt den Haken "Einstellungen behalten" ausschalten, also alle Einstellungen vergessen! Die Nord Firmware kann die Einstellungen nicht korrekt übernehmen.</p>
+    <p>Eine Anleitung die den Wechsel aus einer anderen Community erklärt findest du <a href="https://wiki.freifunk.net/Freifunk_Nord/Knoten_Umzug">hier</a>.</p>
+    <p>Derzeit werden noch nicht alle handelsüblichen Freifunk Router in der stabilen Version unserer Firmware unterstützt. Da diese jedoch ständig weiterentwickelt wird, findest du vielleicht die passende Version für deinen Router in unseren <a href="https://freifunk-malente.de/firmware/ffnord/experimental">Experimentals</a>.</p>
+    <p><strong>Aktuelle Firmware-Version: 0.7.2</strong></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="eight columns">
+    
+    <h2>Allnet</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            ALL0315N
+          </td>
+          <td>
+            
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-allnet-all0315n-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <h2>Buffalo</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            WZR-HP-AG300H/WZR-600DHP
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-buffalo-wzr-hp-ag300h-wzr-600dhp.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-buffalo-wzr-hp-ag300h-wzr-600dhp-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            WZR-HP-G450H
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-buffalo-wzr-hp-g450h.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-buffalo-wzr-hp-g450h-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <h2>D-Link</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            DIR-615
+          </td>
+          <td>
+            
+            
+            
+            <strong>C1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-d-link-dir-615-rev-c1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>C1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-d-link-dir-615-rev-c1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            DIR-825
+          </td>
+          <td>
+            
+            
+            
+            <strong>B1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-d-link-dir-825-rev-b1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>B1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-d-link-dir-825-rev-b1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <h2>GL-iNet</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            6408A
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-gl-inet-6408a-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-gl-inet-6408a-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            6416A
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-gl-inet-6416a-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-gl-inet-6416a-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <h2>Linksys</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            WRT160NL
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-linksys-wrt160nl.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-linksys-wrt160nl-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <h2>NETGEAR</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            WNDR3700
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-netgear-wndr3700.img">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-netgear-wndr3700v2.img">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v4:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-netgear-wndr3700v4.img">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-netgear-wndr3700-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-netgear-wndr3700v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v4:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-netgear-wndr3700v4-sysupgrade.tar">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            WNDR3800
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-netgear-wndr3800.img">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-netgear-wndr3800-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            WNDR4300
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-netgear-wndr4300.img">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-netgear-wndr4300-sysupgrade.tar">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            WNDRMAC
+          </td>
+          <td>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-netgear-wndrmacv2.img">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-netgear-wndrmacv2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <h2>TP-Link</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            CPE210
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1.0:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-cpe210-v1.0.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1.0:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-cpe210-v1.0-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            CPE220
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1.0:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-cpe220-v1.0.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1.0:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-cpe220-v1.0-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            CPE510
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1.0:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-cpe510-v1.0.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1.0:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-cpe510-v1.0-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            CPE520
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1.0:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-cpe520-v1.0.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1.0:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-cpe520-v1.0-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-MR3020
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-mr3020-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-mr3020-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-MR3040
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-mr3040-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-mr3040-v2.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-mr3040-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-mr3040-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-MR3220
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-mr3220-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-mr3220-v2.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-mr3220-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-mr3220-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-MR3420
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-mr3420-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-mr3420-v2.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-mr3420-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-mr3420-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WA701N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa701n-nd-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa701n-nd-v2.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa701n-nd-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa701n-nd-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WA750RE
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa750re-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa750re-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WA801N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa801n-nd-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa801n-nd-v2.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa801n-nd-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa801n-nd-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WA830RE
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa830re-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa830re-v2.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa830re-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa830re-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WA850RE
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa850re-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa850re-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WA860RE
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa860re-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa860re-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WA901N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa901n-nd-v2.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v3:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wa901n-nd-v3.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa901n-nd-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v3:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wa901n-nd-v3-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WDR3500
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wdr3500-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wdr3500-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WDR3600
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wdr3600-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wdr3600-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WDR4300
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wdr4300-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wdr4300-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WDR4900
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wdr4900-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wdr4900-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR1043N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr1043n-nd-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr1043n-nd-v2.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr1043n-nd-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr1043n-nd-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR2543N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr2543n-nd-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr2543n-nd-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR703N
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr703n-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr703n-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR710N
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr710n-v1.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr710n-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR740N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr740n-nd-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v3:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr740n-nd-v3.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v4:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr740n-nd-v4.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v5:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr740n-nd-v5.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr740n-nd-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v3:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr740n-nd-v3-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v4:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr740n-nd-v4-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v5:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr740n-nd-v5-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR741N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr741n-nd-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr741n-nd-v2.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v4:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr741n-nd-v4.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v5:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr741n-nd-v5.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr741n-nd-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr741n-nd-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v4:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr741n-nd-v4-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v5:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr741n-nd-v5-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR743N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr743n-nd-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr743n-nd-v2.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr743n-nd-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr743n-nd-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR841N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v3:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v3.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v5:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v5.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v7:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v7.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v8:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v8.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v9:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v9.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v3:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v3-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v5:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v5-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v7:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v7-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v8:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v8-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v9:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr841n-nd-v9-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR842N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr842n-nd-v1.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr842n-nd-v2.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v1:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr842n-nd-v1-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr842n-nd-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            TL-WR941N/ND
+          </td>
+          <td>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr941n-nd-v2.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v3:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr941n-nd-v3.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v4:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr941n-nd-v4.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v5:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-tp-link-tl-wr941n-nd-v5.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>v2:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr941n-nd-v2-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v3:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr941n-nd-v3-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v4:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr941n-nd-v4-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>v5:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-tp-link-tl-wr941n-nd-v5-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <h2>Ubiquiti</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            Bullet M
+          </td>
+          <td>
+            
+            
+            
+            <strong>XM:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-bullet-m.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>XM:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-bullet-m-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Loco M
+          </td>
+          <td>
+            
+            
+            
+            <strong>XM:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-loco-m.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>XW:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-loco-m-xw.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>XM:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-loco-m-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>XW:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-loco-m-xw-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Nanostation M
+          </td>
+          <td>
+            
+            
+            
+            <strong>XM:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-nanostation-m.bin">factory</a>
+            
+            <br/>
+            
+            
+            
+            <strong>XW:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-nanostation-m-xw.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <strong>XM:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-nanostation-m-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+            
+            
+            <strong>XW:</strong>
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-nanostation-m-xw-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Picostation M
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-picostation-m.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-picostation-m-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Rocket M
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-rocket-m.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-rocket-m-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            UniFi AP (LR)
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-unifi.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-unifi-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            UniFi AP Pro
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-unifi-ap-pro.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-unifi-ap-pro-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            UniFiAP Outdoor
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-ubiquiti-unifiap-outdoor.bin">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-ubiquiti-unifiap-outdoor-sysupgrade.bin">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <h2>x86</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            Generic
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-x86-generic.img.gz">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-x86-generic-sysupgrade.img.gz">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            KVM
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-x86-kvm.img.gz">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/sysupgrade/gluon-ffnord-0.7.2-x86-kvm-sysupgrade.img.gz">sysupgrade</a>
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            VMware
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-x86-vmware.vmdk.7z">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            VirtualBox
+          </td>
+          <td>
+            
+            
+            
+            <a href="http://freifunk-malente.de/firmware/ffnord/stable/factory/gluon-ffnord-0.7.2-x86-virtualbox.vdi.7z">factory</a>
+            
+            <br/>
+            
+          </td>
+          <td>
+            
+            
+            <br/>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+
+    <p>
+    Die Freifunk-Firmware ist Freie Software. Sie basiert auf dem <a href="https://github.com/freifunk-gluon/gluon">Gluon-Framework</a> und <a href="https://openwrt.org/">OpenWrt</a> und darf nach den Bestimmungen der <a href="https://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License</a> weiterverteilt und verändert werden.
+    </p>
+  </div>
+  <div class="four columns panel">
+    <h5>Hardware Versionen</h5>
+    <p>Bei einigen Modellen gibt es mehrere Hardware Versionen. Ist dies bei deinem Modell der Fall, musst du die entsprechende Firmware anhand des Typenschilds unter dem Knoten auswählen.</p>
+    <p>Dieses Bild zeigt das Typenschild eines TP-Link TL-WR1043ND. Die Versionsangabe ist gelb markiert:</p>
+    <a href="images/hardwareversion.png">
+      <img src="images/hardwareversion.png" />
+    </a>
+  </div>
+  <div class="four columns panel">
+    <p>Sämtliche Firmware-Dateien findest du unter <a href="http://gluon.ffki.de/ffnord/0.7.2/">http://gluon.ffki.de/ffnord/0.7.2/</a>.</p>
+    <p>Firmware-mirror <a href="http://gluon.ffki.de/firmware/stable/">http://gluon.ffki.de/firmware/stable/</a>.</p>
+    <p>Das Gluon-Site-Repository befindet sich unter <a href="https://github.com/ffnord/site-nord/">https://github.com/ffnord/site-nord/</a>.</p>
+  </div>
+</div>
+
+
+  <footer>
+    <div class="row">
+      <div class="six columns">
+        <h5>Kontakt</h5>
+        <p>
+        <strong>E-Mail:</strong> <a href="mailto:ffnord@freifunk.net">ffnord@freifunk.net</a> <br/>
+        <strong>Mailingliste:</strong> <a href="http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net">ffnord@freifunk.net</a> <br/>
+          
+          <strong>IRC:</strong> ffnord im <a href="http://hackint.org">hackint</a> | <a href="https://kiwiirc.com/client/irc.eu.hackint.org:+9999/ffnord?nick=ffnord-besucher">Live Webchat</a><br/>
+          
+          <strong>Forum:</strong> <a href="https://forum.freifunk.net/c/meta-community/ffnord" target="_blank"></a><br/>
+          <strong>Twitter:</strong> <a href="https://twitter.com/FreifunkNord">@FreifunkNord</a><br/>
+          
+          <a href="/impressum.html">Impressum</a>
+        </p>
+      </div>
+      <div class="four columns">
+        <h5>Links</h5>
+        <ul>
+          <li><a href="http://wiki.freifunk.net/Freifunk_Nord/">Wiki</a></li>
+          <li><a href="http://nord.freifunk.net/numnodes.html">Knotenliste</a></li>
+          <li><a href="http://mesh.nord.freifunk.net/">Netzgraph</a></li>
+          <li><a href="http://mesh.nord.freifunk.net/">Knotenkarte</a></li>
+        </ul>
+      </div>
+      <div class="four columns">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+
+  <script src="javascripts/jquery.js"></script>
+
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+
+  <script src="javascripts/jquery.placeholder.js"></script>
+
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+
+  -->
+
+  <!-- Included JS Files (Compressed) -->
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/foundation.min.js"></script>
+
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app.js"></script>
+</body>
+</html>
