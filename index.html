@@ -8,19 +8,12 @@ layout: base
   <div class="row">
     <div class="eight columns">
       <div id="flash_placeholder">
-        <a id="video_starter" title="2x klicken zum Starten" href="#video" onclick="add_video();return false" onmouseover="add_video()">Start Video (benötigt Javascript)</a>
-        <script>
-            function add_video(){
-                v='<video poster="images/freifunk_verbindet_sd.png" style="max-height:336px;width: 100%; height: 100%" controls>';
-                  v+='<source src="videos/freifunk_verbindet_sd.mp4" type="video/mp4" />';
-                  v+='<source src="videos/freifunk_verbindet_sd.webm" type="video/webm" />';
-                  v+='<source src="videos/freifunk_verbindet_sd.ogv" type="video/ogg" />';
-                  v+='Your browser does not support the video tag.';
-                v+='</video>';
-                document.getElementById("flash_placeholder").style.background='transparent';
-                document.getElementById("flash_placeholder").innerHTML=v;
-            }
-        </script>
+        <video poster="images/freifunk_verbindet_sd.png" style="width: 100%; height: 100%" controls>
+          <source src="videos/freifunk_verbindet_sd.mp4" type="video/mp4" />
+          <source src="videos/freifunk_verbindet_sd.webm" type="video/webm" />
+          <source src="videos/freifunk_verbindet_sd.ogv" type="video/ogg" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
     <div class="four columns">
@@ -49,7 +42,7 @@ layout: base
 		<!--  Raw HTML content: [end] -->
 			</div>
 	<!--  CONTENT ELEMENT, uid:161/html [end] -->
-<br>Schau ob in deiner Nähe schon eine Community besteht (noch nicht auf der Karte, 
+<br>Schau ob in deiner Nähe schon eine Community besteht (noch nicht auf der Karte,
 aber auch im Freifunk Nord Gebiet sind die angrenzenden Kommunen südlich von Hamburg, dort gibt es z.B. schon <a href="http://freifunk-lueneburg.de/">Freifunk Lüneburg</a>). Ist dies nicht der Fall, kannst du deinen Router mit der Freifunk Nord Firmware flashen. Mit Freifunk Nord wollen wir Gebieten außerhalb bestehender Communities eine Starthilfe geben. Wir möchten explizit die Gründung lokaler Communities fördern.</p>
     <p>Weitere Karten:<ul>
       <li><a href="http://www.freifunk-karte.de">Freifunk Karte</li>
