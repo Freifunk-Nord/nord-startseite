@@ -14,10 +14,14 @@
 ----------------------------------------- */
 
 div.header {
-  background: transparent url(../images/ffnord-logo.svg) scroll no-repeat right 9px / auto 100%;
+  background: transparent url(../images/freifunk-nord-logo_shadowed.png) scroll no-repeat 6px 4px / auto 72%;
   min-height: 110px;
 }
 
+#site_title{
+  background: transparent url("../images/Schriftzug_Freifunk_Nord.svg") no-repeat scroll 75px -89px / 309px auto;
+  color: transparent;
+}
 #flash_placeholder {
   background:url('../images/flash_placeholder.png');
   min-height:330px;
@@ -26,20 +30,53 @@ div.header {
   max-width: 100%;
 }
 
+.numnodes{
+  position:absolute;margin-left:-50px; margin-top:24px;
+  width: 118px;
+  height: 92px;
+}
+@media only screen and (max-width: 870px) {
+  .numnodes{
+    position:absolute;margin-left:-20px; margin-top:24px;
+  width: 118px;
+  }
+} 
+@media only screen and (max-width: 670px) {
+  .numnodes{
+    display: none;
+  }
+} 
+
+ul.link-list{
+  margin: 0px 0px 10px 0px !important;
+  padding-top: 7px;
+}
+
 .firmwarelist {
   min-width:90%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   div.header {
-    background: transparent !important;
-    min-height: 0px;
+    background-size:auto 60%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  div.header {
+    background-size:auto 50%;
   }
   .teaser > div > div.eight.columns{
     max-height:305px;
   }
   #flash_placeholder {
     background-size:100%;
+  }
+  ul.link-list{
+    margin: 0px -15px 10px -27px !important;
+    padding-top: 7px;
+  }
+  #site_title {
+    background: transparent url("../images/Schriftzug_Freifunk_Nord.svg") no-repeat scroll 75px -72px / 254px auto;
   }
 }
 
