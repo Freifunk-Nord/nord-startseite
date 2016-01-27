@@ -12,7 +12,7 @@ community:
   url_wiki:  "http://wiki.freifunk.net/Freifunk_Nord/"
 
   url_geomap: "http://mesh.nord.freifunk.net/"
-  url_graph: "http://mesh.nord.freifunk.net/"
+  url_graph: "http://mesh.nord.freifunk.net/#!v:g"
   url_nodelist: "http://nord.freifunk.net/numnodes.html"
 
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net"
