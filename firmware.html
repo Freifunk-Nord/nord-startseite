@@ -15,6 +15,14 @@ layout: base
     <h2>Download der Firmware</h2>
     <p>	Bei fragen, komme in den IRC Chat hackint.org #ffnord oder in unseren <a href="https://kiwiirc.com/client/irc.eu.hackint.org:+9999/ffnord?nick=ffnord-besucher">Webchat</a>.
     </p>
+
+    <h4>Häufigste Modelle</h4>
+      <ul>
+        <li><a href="/firmware.html#TP-Link_TL-WR841N/ND">TL-WR841N/ND</a></li>
+        <li><a href="/firmware.html#TP-Link_TL-WR1043N/ND">TL-WR1043N/ND v2</a></li>
+        <li><a href="/firmware.html#TP-Link">CPE210</a></li>      
+      </ul>
+	
     <p>Hier findest du eine Liste unterstützter Router-Modelle und ihre entsprechenden Firmware Images.</p>
     <p><b>Achtung!</b> Beim Umstieg von einer anderen Firmware aus einer anderen Community unbedingt den Haken "Einstellungen behalten"
     ausschalten, also alle Einstellungen vergessen! Die Nord Firmware kann die Einstellungen nicht korrekt übernehmen.</p>
@@ -24,7 +32,6 @@ layout: base
     <p>Derzeit werden noch nicht alle handelsüblichen Freifunk Router in der stabilen Version unserer Firmware unterstützt. Da diese jedoch ständig weiterentwickelt wird, findest du vielleicht die passende Version für deinen Router in unseren <a href="https://freifunk-malente.de/firmware/ffnord/experimental">Experimentals</a>.</p>
   </div>
 </div>
-
 <div class="row">
   <div class="eight columns">
     <h2>TP-Link (beta)</h2>
@@ -80,6 +87,7 @@ layout: base
     <table class="firmwarelist">
       <thead>
         <tr>
+          <th></th>
           <th>Modell</th>
           <th>Erstinstallation</th>
           <th>Upgrade</th>
@@ -88,8 +96,12 @@ layout: base
       <tbody>
         {% for model in groups[1] %}
         <tr>
+          <td class="router" style="background-image:url(images/models/{{ groups[0] | slugify: 'pretty' }}-{{ model[0] | slugify: 'pretty' }}_100x60.png)"> 
+          </td>
           <td>
-            {{ model[0] }}
+            <a name="{{ groups[0] }}_{{ model[0] }}"></a>
+            <strong>{{ model[0] }}</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/{{ groups[0] | slugify: 'pretty' }}/{{ model[0] | slugify: 'pretty' }}" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
           </td>
           <td>
             {% for fw in model[1] %}
