@@ -83,7 +83,8 @@ layout: base
 </div>
 
     {% for groups in site.firmwares %}
-    <h2>{{ groups[0] }}</h2>
+    <h2><a name="{{ groups[0] }}"></a>
+    {{ groups[0] }}</h2>
     <table class="firmwarelist">
       <thead>
         <tr>
