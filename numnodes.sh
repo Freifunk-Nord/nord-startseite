@@ -1,6 +1,7 @@
 #!/bin/bash
 # reads all online nodes and creates an HTML page from the template numnodes.template
-JSON=/opt/ffmap-backend-neu/json/nodes.json
+#JSON=/opt/ffmap-backend-neu/json/nodes.json
+JSON=/var/www/html/meshviewer/data/nodes.json
 #JSON=/opt/ffmap-backend-neu/json/alfred.158.json
 #wget http://map.freifunk.in-kiel.de/json/nodes.json -qO $JSON
 
@@ -11,9 +12,9 @@ logfile=/var/log/numnodes.log
 sleep 2
 
 #echo -n "online nodes: "
-#num="$(cat $JSON |jq '.nodes[] | select(.flags.gateway==false) | select(.flags.online==true)'|grep online|wc -l)"
+num="$(cat $JSON |jq '.nodes[] | select(.flags.gateway==false) | select(.flags.online==true)'|grep online|wc -l)"
 #num="$(cat $JSON |grep hostname|wc -l)"
-num="$(jq .< $JSON |grep hostname|wc -l)"
+#num="$(jq .< $JSON |grep hostname|wc -l)"
 #HOSTLIST=$(cat $JSON |jq '.[].hostname'| tr '\n' ' '| sed 's/" "/<br>/g'| sed 's/"//g')
 HOSTLIST=$( cat $JSON |jq '.[]'|grep hostname|cut -d' ' -f8| tr '\n' ' '| sed 's/", "/<br>/g'| sed 's/"//g')
 #echo $num
