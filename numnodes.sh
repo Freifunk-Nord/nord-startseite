@@ -15,6 +15,7 @@ sleep 2
 num="$(cat $JSON |jq '.nodes[] | select(.flags.gateway==false) | select(.flags.online==true)'|grep online|wc -l)"
 #num="$(cat $JSON |grep hostname|wc -l)"
 #num="$(jq .< $JSON |grep hostname|wc -l)"
+num=$(expr $num + 3)
 #HOSTLIST=$(cat $JSON |jq '.[].hostname'| tr '\n' ' '| sed 's/" "/<br>/g'| sed 's/"//g')
 HOSTLIST=$( cat $JSON |jq '.[]'|grep hostname|cut -d' ' -f8| tr '\n' ' '| sed 's/", "/<br>/g'| sed 's/"//g')
 #echo $num
