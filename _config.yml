@@ -37,8 +37,8 @@ community:
 
 firmware:
   #base: "https://freifunk.in-kiel.de/firmware/stable/"
-  base: "http://freifunk-malente.de/firmware/ffnord/stable/"
-  firmware_mirror: "http://gluon.ffki.de/ffnord/0.7.2/"
+  base: "https://ffnord.net/firmware/stable/"
+  #firmware_mirror: "http://gluon.ffki.de/ffnord/0.7.2/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
