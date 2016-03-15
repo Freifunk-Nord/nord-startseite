@@ -5,32 +5,28 @@ require 'pp'
 
 COMMUNITY_TLD = 'ffnord'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-FIRMWARE_VERSION = '0.7.2'
+FIRMWARE_VERSION = '2016.1.2'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
 #FIRMWARE_BASE = 'http://localhost/freifunk/firmware/ffki/0.7.1/'
 #FIRMWARE_BASE = 'http://freifunk.discovibration.de/firmware/firmware-0.7.1/'
 #FIRMWARE_BASE = 'http://gluon.ffki.de/ffnord/0.7.2/'
-FIRMWARE_BASE = 'http://freifunk-malente.de/firmware/ffnord/stable/'
-FIRMWARE_MIRROR = 'http://gluon.ffki.de/ffnord/0.7.2/'
+FIRMWARE_BASE = 'https://ffnord.net/firmware/stable/2016.1.2/'
+#FIRMWARE_MIRROR = 'http://gluon.ffki.de/ffnord/0.7.2/'
 
 GROUPS = {
-  "Allnet" => {
-    models: [
-      "ALL0315N"
-    ],
-    extract_rev: lambda { |model, suffix| nil },
-  },
   "Buffalo" => {
     models: [
       "WZR-HP-AG300H/WZR-600DHP",
+      "WZR-HP-AG300NH",
       "WZR-HP-G450H",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
   "D-Link" => {
     models: [
+      "DIR-505",
       "DIR-615",
       "DIR-825",
     ],
@@ -58,12 +54,28 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
   },
+  "Onion" => {
+    models: [
+      "Omega",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "Western Digital" => {
+    models: [
+      "My-NET-N600",
+      "My-NET-N750",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "TP-Link" => {
     models: [
+      "Archer C5",
+      "Archer C7",
       "CPE210",
       "CPE220",
       "CPE510",
       "CPE520",
+      "MR13u1",
       "TL-MR3020",
       "TL-MR3040",
       "TL-MR3220",
@@ -88,6 +100,8 @@ GROUPS = {
       "TL-WR743N/ND",
       "TL-WR841N/ND",
       "TL-WR842N/ND",
+      "TL-WR843N/ND",
+      "TL-WR940N/ND",
       "TL-WR941N/ND",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
@@ -96,10 +110,12 @@ GROUPS = {
     models: [
       "Bullet M",
       "Loco M",
+      "LS SR71"
       "Nanostation M",
       "UniFi AP Pro",
       "UniFi",
       "UniFiAP Outdoor",
+      "UniFiAP Outdoor+",
       "Picostation M",
       "Rocket M",
     ],
@@ -129,6 +145,15 @@ GROUPS = {
     models: [
       "Generic",
       "KVM",
+      "VirtualBox",
+      "VMware",
+      "Xen",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "x86-64" => {
+    models: [
+      "Generic",
       "VirtualBox",
       "VMware",
     ],
