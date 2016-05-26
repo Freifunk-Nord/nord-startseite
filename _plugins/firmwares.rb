@@ -10,10 +10,10 @@ FIRMWARE_VERSION = '0.16.4'
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
 #FIRMWARE_BASE = 'http://localhost/freifunk/firmware/ffki/0.7.1/'
-#FIRMWARE_BASE = 'http://freifunk.discovibration.de/firmware/firmware-0.7.1/'
 #FIRMWARE_BASE = 'http://gluon.ffki.de/ffnord/0.7.2/'
-FIRMWARE_BASE = 'http://mesh.nord.freifunk.net/firmware/0.16.4/stable/'
-FIRMWARE_MIRROR = 'http://mesh.nord.freifunk.net/firmware/0.16.4/stable/'
+#FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/0.16.4/stable/'
+FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/0.16.4/stable/'
+FIRMWARE_MIRROR = 'https://nord.freifunk.net/firmware/0.16.4/stable/'
 
 GROUPS = {
   "8Devices" => {
@@ -26,7 +26,7 @@ GROUPS = {
     models: [
       "AP121",
       "AP121U",
-      "HORNET-UB",
+      "Hornet-UB",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -77,7 +77,7 @@ GROUPS = {
   },
   "Onion" => {
     models: [
-      "OMEGA",
+      "Omega",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -123,11 +123,12 @@ GROUPS = {
     models: [
       "Airgateway",
       "Airrouter",
-      "",
+      "Loco M",
+      "Nanostation-Loco M5",
       "Bullet M",
-      "Nanostation-Loco M",
-      "LS-SR71",
+      "LS-SR71", #LiteStation-SR71
       "Nanostation M",
+      "Nanostation M5",
       "Picostation M",
       "Rocket M",
       "UniFi AP Pro",
