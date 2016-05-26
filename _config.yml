@@ -36,7 +36,7 @@ community:
   geo_lon: 10.0
 
 firmware:
-  base: "https://mesh.nord.freifunk.net/firmware/stable/"
+  base: "https://nord.freifunk.net/firmware/stable/"
   #firmware_mirror: "http://gluon.ffki.de/ffnord/0.7.2/"
   type: "gluon"
 
