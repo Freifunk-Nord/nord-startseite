@@ -12,7 +12,7 @@ FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-'
 #FIRMWARE_BASE = 'http://localhost/freifunk/firmware/ffki/0.7.1/'
 #FIRMWARE_BASE = 'http://gluon.ffki.de/ffnord/0.7.2/'
 FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/0.16.4/stable/'
-FIRMWARE_MIRROR = 'https://nord.freifunk.net/firmware/0.16.4/stable/'
+FIRMWARE_MIRROR = 'http://vpn3.ffnord.net/firmware/0.16.4/stable/'
 
 GROUPS = {
   "8Devices" => {
@@ -123,6 +123,7 @@ GROUPS = {
       "Airgateway",
       "Airrouter",
       "Loco M",
+      "Nanostation-Loco M2",
       "Nanostation-Loco M5",
       "Bullet M",
       "LS-SR71", #LiteStation-SR71
