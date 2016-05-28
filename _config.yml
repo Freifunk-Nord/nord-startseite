@@ -36,8 +36,8 @@ community:
   geo_lon: 10.0
 
 firmware:
-  base: "https://nord.freifunk.net/firmware/0.16.4/stable/"
-  firmware_mirror: "http://vpn3.ffnord.net/firmware/0.16.4/stable/"
+  base: "https://nord.freifunk.net/firmware/0.16.5/stable/"
+  firmware_mirror: "http://vpn3.ffnord.net/firmware/0.16.5/stable/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
