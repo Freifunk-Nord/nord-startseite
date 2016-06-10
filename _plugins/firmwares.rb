@@ -5,14 +5,14 @@ require 'pp'
 
 COMMUNITY_TLD = 'ffnord'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-FIRMWARE_VERSION = '0.16.4'
+FIRMWARE_VERSION = '0.16.5'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
 #FIRMWARE_BASE = 'http://localhost/freifunk/firmware/ffki/0.7.1/'
 #FIRMWARE_BASE = 'http://gluon.ffki.de/ffnord/0.7.2/'
-FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/0.16.4/stable/'
-FIRMWARE_MIRROR = 'http://vpn3.ffnord.net/firmware/0.16.4/stable/'
+FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/0.16.5/stable/'
+FIRMWARE_MIRROR = 'http://vpn3.ffnord.net/firmware/0.16.5/stable/'
 
 GROUPS = {
   "8Devices" => {
@@ -80,6 +80,18 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
+  "OpenMesh" => {
+    models: [
+      "MR600",
+      "MR900",
+      "OM2P",
+      "OM2P-HS",
+      "OM2P-LC",
+      "OM5P",
+      "OM5P-AN",
+    ],
+    extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+  },
   "TP-Link" => {
     models: [
       "CPE210",
@@ -131,6 +143,7 @@ GROUPS = {
       "Nanostation M5",
       "Picostation M",
       "Rocket M",
+      "Rocket M XW",
       "UniFi AP Pro",
       "UniFi",
       "UniFiAP Outdoor",
