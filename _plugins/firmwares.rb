@@ -65,6 +65,15 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
+  "Meraki" => {
+    models: [
+      "mr12",
+      "mr16",
+      "mr62",
+      "mr66",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "NETGEAR" => {
     models: [
       "WNDR3700",
@@ -90,10 +99,12 @@ GROUPS = {
       "OM5P",
       "OM5P-AN",
     ],
-    extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+    extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
   },
   "TP-Link" => {
     models: [
+      "ARCHER-C5",
+      "ARCHER-C7",
       "CPE210",
       "CPE220",
       "CPE510",
