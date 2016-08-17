@@ -20,7 +20,7 @@ num=$(expr $num + 3)
 HOSTLIST=$( cat $JSON |jq '.[]'|grep hostname|cut -d' ' -f8| tr '\n' ' '| sed 's/", "/<br>/g'| sed 's/"//g')
 #echo $num
 cd `dirname "$0"`
-sed 's/<NUM_NODES>/'$num'/g' numnodes.template | sed "s/<HOSTLIST>/$HOSTLIST/g" > build/numnodes.html
+sed 's/<NUM_NODES>/'$num'/g' numnodes.template | sed "s/<HOSTLIST>/$HOSTLIST/g" > numnodes.html
 
 echo "$(date) numnodes: $num">>$logfile
 echo "$(date) hosts: $HOSTLIST">>$logfile

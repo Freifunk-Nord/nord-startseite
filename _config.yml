@@ -19,7 +19,7 @@ community:
 
   url_firmware: "http://nord.freifunk.net/firmware.html"
 
-  url_blog_cms: "https://github.com/ffnord/nord-blog"
+  url_blog_cms: "https://github.com/Freifunk-Nord/nord-blog"
 
   # Mail Contacts
   mail_info: "kontakt@ffnord.net"
@@ -36,15 +36,15 @@ community:
   geo_lon: 10.0
 
 firmware:
-  base: "https://nord.freifunk.net/firmware/0.16.5/stable/"
-  firmware_mirror: "http://vpn3.ffnord.net/firmware/0.16.5/stable/"
+  base: "https://nord.freifunk.net/firmware/stable/"
+  firmware_mirror: "http://vpn3.ffnord.net/firmware/stable/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
-  gluon_site: "https://github.com/ffnord/site-nord/"
+  gluon_site: "https://github.com/Freifunk-Nord/nord-site/"
 
   # Path to local checkout of the site repo
-  gluon_site_dir: "/var/www/html/ffnord"
+  gluon_site_dir: "/opt/nord-site"
 
 tld:
   label: "ffnord"
