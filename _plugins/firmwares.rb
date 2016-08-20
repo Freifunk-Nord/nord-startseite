@@ -9,10 +9,8 @@ FIRMWARE_VERSION = '0.16.5'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
-#FIRMWARE_BASE = 'http://localhost/freifunk/firmware/ffki/0.7.1/'
-#FIRMWARE_BASE = 'http://gluon.ffki.de/ffnord/0.7.2/'
-FIRMWARE_MIRROR = 'https://nord.freifunk.net/firmware/stable/'
-FIRMWARE_BASE = 'http://vpn3.ffnord.net/firmware/stable/'
+FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/stable/'
+FIRMWARE_MIRROR = 'http://vpn3.ffnord.net/firmware/stable/'
 
 GROUPS = {
   "8Devices" => {
