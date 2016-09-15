@@ -50,42 +50,63 @@ aber auch im Freifunk Nord Gebiet sind die angrenzenden Kommunen südlich von Ha
     </ul>
     </p>
 
-    <h2 id="was_ist_freifunk">Was ist Freifunk?</h2>
-    <p>
-    Freifunk ist ein Projekt, über das Menschen wie du und ich ein stadtweites drahtloses Datennetz aufbauen.
-    Das Netz soll die freie Kommunikation innerhalb der ganzen Stadt und, mithilfe von Links zu anderen Städten, auch überregional ermöglichen.
-    Um dies zu erreichen, werden sogenannte Freifunkknoten - das sind Router mit den Antennen, ähnlich denen, die du von anderen drahtlosen Internetzugängen schon kennst - von Freiwilligen an vielen Orten in der Stadt betrieben.
-    Jedes WLAN-fähige Gerät, also beispielsweise Handy oder Notebook, kann sich in der Nähe eines solchen Knotens mit dem Netz verbinden und darüber mit anderen Teilnehmern kommunizieren.
-    Auch ein Zugang ins Internet steht meistens zur Verfügung.
-    </p>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script type="text/javascript">
+      <!-- //
+      var speechpause=0;
+      function toggleSpeech(){
+        if(speechpause!=1){
+          responsiveVoice.pause();
+          speechpause=1;
+        }else{
+          responsiveVoice.resume();
+          speechpause=0;
+        }
+      }
+      //-->
+    </script>
+    <div id="startpagecontent">
+      <div style="float:right">
+        <input onclick="responsiveVoice.speak($('#startpagecontent').text(), 'Deutsch Female', {pitch: .7});" type="button" value="🔊 Play" />
+        <input onclick="toggleSpeech()" type="button" value="||" />
+      </div>
+      <h2 id="was_ist_freifunk">Was ist Freifunk?</h2>
+      <p>
+      Freifunk ist ein Projekt, über das Menschen wie du und ich ein stadtweites drahtloses Datennetz aufbauen.
+      Das Netz soll die freie Kommunikation innerhalb der ganzen Stadt und, mithilfe von Links zu anderen Städten, auch überregional ermöglichen.
+      Um dies zu erreichen, werden sogenannte Freifunkknoten - das sind Router mit den Antennen, ähnlich denen, die du von anderen drahtlosen Internetzugängen schon kennst - von Freiwilligen an vielen Orten in der Stadt betrieben.
+      Jedes WLAN-fähige Gerät, also beispielsweise Handy oder Notebook, kann sich in der Nähe eines solchen Knotens mit dem Netz verbinden und darüber mit anderen Teilnehmern kommunizieren.
+      Auch ein Zugang ins Internet steht meistens zur Verfügung.
+      </p>
 
-    <h2 id="wie_funktioniert_freifunk">Wie funktioniert Freifunk?</h2>
-    <p>
-    Freifunk wird von einer Gruppe von Freiwilligen in Gemeinschaftsarbeit gepflegt.
-    Wir, die Freifunk-Community, sorgen dafür, dass auch hinter den Knoten alles funktioniert,
-    pflegen und erweitern die Software für die Knoten, stellen Freifunk auf öffentlichen
-    Veranstaltungen vor, organisieren den Ausbau oder reden einfach nur mit unseren Nachbarn über Freifunk. An der technischen Arbeit kann man sich beteiligen, muss es aber nicht.
-    </p>
-    <p>
-    Technisch gesehen bauen die Freifunkknoten ein sogenanntes Masch-Netzwerk untereinander auf. Das funktioniert immer, wenn sich zwei Knoten gegenseitig empfangen.
-    Wie weit die Knoten senden und in welchem Umkreis sie andere Kntoten empfangen können, liegt am Typ und der verwendeten Antennen.
-    Damit die dabei enstehenden Masch-Wolken sich auch empfangen können, wenn sie weiter als ihre Reichweite es zulässt voneinander entfernt stehen,
-    kann man einen Teil seines Internetanschlusses mit dem Freifunk teilen.
-    So können sich über gut gesicherte Tunnel grosse Masch-Wolken bilden, über die unter anderem wieder neue Internetzugänge zu erreichen sind.
-    </p>
+      <h2 id="wie_funktioniert_freifunk">Wie funktioniert Freifunk?</h2>
+      <p>
+      Freifunk wird von einer Gruppe von Freiwilligen in Gemeinschaftsarbeit gepflegt.
+      Wir, die Freifunk-Community, sorgen dafür, dass auch hinter den Knoten alles funktioniert,
+      pflegen und erweitern die Software für die Knoten, stellen Freifunk auf öffentlichen
+      Veranstaltungen vor, organisieren den Ausbau oder reden einfach nur mit unseren Nachbarn über Freifunk. An der technischen Arbeit kann man sich beteiligen, muss es aber nicht.
+      </p>
+      <p>
+      Technisch gesehen bauen die Freifunkknoten ein sogenanntes Masch-Netzwerk untereinander auf. Das funktioniert immer, wenn sich zwei Knoten gegenseitig empfangen.
+      Wie weit die Knoten senden und in welchem Umkreis sie andere Kntoten empfangen können, liegt am Typ und der verwendeten Antennen.
+      Damit die dabei enstehenden Masch-Wolken sich auch empfangen können, wenn sie weiter als ihre Reichweite es zulässt voneinander entfernt stehen,
+      kann man einen Teil seines Internetanschlusses mit dem Freifunk teilen.
+      So können sich über gut gesicherte Tunnel grosse Masch-Wolken bilden, über die unter anderem wieder neue Internetzugänge zu erreichen sind.
+      </p>
 
-    <h2 id="wie_mitmachen">Wie kann ich am Freifunk mitmachen?</h2>
-    <p>Um selber zum Freifunker, zur Freifunkerin zu werden, brauchst du nichts weiter als ein kleines Gerät, das du bei dir zu Hause aufstellst und mit dem Internet verbindest. Dieses Gerät ist ein sogenannter Router, der mit etwas
-        neuer Software zum Freifunkknoten wird. Der einfachste Weg zu einem solchen Freifunkknoten führt über deine lokale Freifunkcommunity. Dort hält man oft passende und auch schon
-        vorbereitete Knoten zum Selbstkostenpreis bereit. Du nimmst dir einen mit, stellst ihn zu Hause auf, verbindest ihn mit Internet und Netzanschluss ... und schon bist auch du ein
-        Teil der wachsenden Freifunkcommunity.
-    </p>
+      <h2 id="wie_mitmachen">Wie kann ich am Freifunk mitmachen?</h2>
+      <p>Um selber zum Freifunker, zur Freifunkerin zu werden, brauchst du nichts weiter als ein kleines Gerät, das du bei dir zu Hause aufstellst und mit dem Internet verbindest. Dieses Gerät ist ein sogenannter Router, der mit etwas
+          neuer Software zum Freifunkknoten wird. Der einfachste Weg zu einem solchen Freifunkknoten führt über deine lokale Freifunkcommunity. Dort hält man oft passende und auch schon
+          vorbereitete Knoten zum Selbstkostenpreis bereit. Du nimmst dir einen mit, stellst ihn zu Hause auf, verbindest ihn mit Internet und Netzanschluss ... und schon bist auch du ein
+          Teil der wachsenden Freifunkcommunity.
+      </p>
 
-    <h2 id="warum_freifunk">Warum wird Freifunk gebraucht?</h2>
-    <p>Der Zugang zu Information und zu Möglichkeiten, diese selbst zu verbreiten, ist zum elementaren Bestandteil unseres täglichen Lebens geworden. Sich Informationen beschaffen und bearbeiten zu können gehört zu den wesentlichen Voraussetzungen einer funktionierenden Demokratie.
-        Dadurch, dass man das Internet und alles, was damit zusammenhängt, politisch lange Zeit nicht wichtig genommen hat, ist die elektronische Kommunikation heute in wesentlichen Teilen der demokratischen Kontrolle entzogen und liegt in den Händen weniger grosser Telekommunikationskonzerne.
-        Dem stellt der Freifunk eine Alternative an die Seite. Eine Alternative, die für jeden frei zugänglich ist, die kostenfrei ist, und die auch dann noch steht, wenn andere möglicherweise Pleite gehen. Darum geht es, um nichts mehr und nichts weniger: dass alle Menschen an der Gemeinschaft teilhaben können.
-    </p>
+      <h2 id="warum_freifunk">Warum wird Freifunk gebraucht?</h2>
+      <p>Der Zugang zu Information und zu Möglichkeiten, diese selbst zu verbreiten, ist zum elementaren Bestandteil unseres täglichen Lebens geworden. Sich Informationen beschaffen und bearbeiten zu können gehört zu den wesentlichen Voraussetzungen einer funktionierenden Demokratie.
+          Dadurch, dass man das Internet und alles, was damit zusammenhängt, politisch lange Zeit nicht wichtig genommen hat, ist die elektronische Kommunikation heute in wesentlichen Teilen der demokratischen Kontrolle entzogen und liegt in den Händen weniger grosser Telekommunikationskonzerne.
+          Dem stellt der Freifunk eine Alternative an die Seite. Eine Alternative, die für jeden frei zugänglich ist, die kostenfrei ist, und die auch dann noch steht, wenn andere möglicherweise Pleite gehen. Darum geht es, um nichts mehr und nichts weniger: dass alle Menschen an der Gemeinschaft teilhaben können.
+      </p>
+    </div>
   </div>
 
   <div class="four columns">
