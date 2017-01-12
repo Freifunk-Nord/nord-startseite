@@ -5,12 +5,12 @@ require 'pp'
 
 COMMUNITY_TLD = 'ffnord'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-FIRMWARE_VERSION = '0.16.5'
+FIRMWARE_VERSION = '2016.2.2'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
 FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/stable/'
-FIRMWARE_MIRROR = 'http://vpn3.ffnord.net/firmware/stable/'
+FIRMWARE_MIRROR = 'http://vpn2.freifunknord.de/firmware/v2016.2.2/stable/'
 
 GROUPS = {
   "8Devices" => {
@@ -24,6 +24,11 @@ GROUPS = {
       "AP121",
       "AP121U",
       "Hornet-UB",
+      "Network-N2-N5",
+      "Network-Tube2H",
+      "Network-AP121",
+      "Network-AP121U",
+      "Network-Hornet-UB"
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -54,6 +59,12 @@ GROUPS = {
     models: [
       "6408A",
       "6416A",
+    ],
+    extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+  },
+  "GL" => {
+    models: [
+      "AR150"
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
@@ -96,8 +107,17 @@ GROUPS = {
       "OM2P-LC",
       "OM5P",
       "OM5P-AN",
+      "mr1750",
+      "mr1750v2"
     ],
     extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
+  },
+  "Raspberry Pi" => {
+    models: [
+      "Raspberry-Pi",
+      "Raspberry-Pi-2"
+    ],
+    extract_rev: lambda { |model, suffix| nil },
   },
   "TP-Link" => {
     models: [
@@ -162,7 +182,7 @@ GROUPS = {
 
       if rev == '-xw'
         'XW'
-      elsif model == 'Nanostation M' or model == 'Nanostation-Loco M' or model == 'Bullet M'
+      elsif model == 'Nanostation M' or model == 'Loco M' or model == 'Nanostation-Loco M' or model == 'Bullet M'
         'XM'
       else
         nil
