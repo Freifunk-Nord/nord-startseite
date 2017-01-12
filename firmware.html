@@ -31,12 +31,17 @@ layout: base
     <br/>
     <p>Derzeit werden noch nicht alle handelsüblichen Freifunk Router in der stabilen Version unserer Firmware unterstützt. Da diese jedoch ständig weiterentwickelt wird, findest du vielleicht die passende Version für deinen Router in unseren <a href="https://nord.freifunk.net/firmware/">Experimentals</a>.</p>
   </div>
-</div>  
+</div>
+<div class="row">
+  <div class="eight columns">
+    <table>
+  
   <div class="row">
   <div class="eight columns">
     <p><strong>Aktuelle Firmware-Version: {{ site.firmware_version }}</strong></p>
   </div>
-    <table>
+</div>
+
     {% for groups in site.firmwares %}
     <h2><a name="{{ groups[0] }}"></a>
     {{ groups[0] }}</h2>
