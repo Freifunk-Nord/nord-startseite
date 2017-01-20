@@ -14,6 +14,7 @@ for i in *.jpg; do
 new="$(basename $i .jpg \
 | sed -e 's/\.\(img\|vdi\|vmdk\)$//g' \
 | sed -E 's/-v[0-9\.]+$//')_100x60.png"
+| sed -E 's/-rev-[a-z][0-9\.]+$//')_100x60.png"
 #echo $new; done
 touch $new
 convert $i -resize 100x60 $new
