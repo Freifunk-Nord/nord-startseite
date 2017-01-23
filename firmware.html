@@ -57,12 +57,12 @@ layout: base
       <tbody>
         {% for model in groups[1] %}
         <tr>
-          <td class="router" style="background-image:url(images/models/{{ groups[0] | slugify: 'pretty' }}-{{ model[0] | slugify: 'pretty' }}_100x60.png)"> 
+          <td class="router" style="background-image:url(images/models/{{ groups[0] | downcase | replace: ' ','-' }}-{{ model[0] | downcase | replace: ' ','-' | replace: '/','-' }}_100x60.png)">
           </td>
           <td>
             <a name="{{ groups[0] }}_{{ model[0] }}"></a>
             <strong>{{ model[0] }}</strong>
-            <br><a class="infolink" href="https://wiki.openwrt.org/toh/{{ groups[0] | slugify: 'pretty' }}/{{ model[0] | slugify: 'pretty' }}" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/{{ groups[0] | slugify: 'pretty' }}/{{ model[0] | slugify: 'pretty' | replace: '/','-' | replace: 'N-ND','ND' }}" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
           </td>
           <td>
             {% for fw in model[1] %}
@@ -81,8 +81,7 @@ layout: base
             {% if fw[0] %}
             <strong>{{ fw[0] }}:</strong>
             {% endif %}
-            <a href="{{ fw[1].sysupgrade }}">Upgrade{% 
-            if fw[1].factory : %}{% else %}=Firmware{% endif %}</a>
+            <a href="{{ fw[1].sysupgrade }}">Upgrade{% if fw[1].factory : %}{% else %}=Firmware{% endif %}</a>
             {% endif %}
             <br/>
             {% endfor %}
