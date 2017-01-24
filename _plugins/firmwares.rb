@@ -30,6 +30,7 @@ GROUPS = {
       "Network-AP121U",
       "Network-Hornet-UB"
     ],
+    #FIXME: alfa-networks to alfa in OpenWRT Wiki info links and Router node pictures
     extract_rev: lambda { |model, suffix| nil },
   },
   "Allnet" => {
@@ -62,7 +63,7 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
-  "GL" => {
+  "GL" => { #this one is also GL.inet
     models: [
       "AR150"
     ],
@@ -189,20 +190,17 @@ GROUPS = {
       end
     },
     transform_label: lambda { |model|
-      #if model == 'Bullet M' then
-      #  'Bullet M, Loco M'
-      #els
       if model == 'UniFi' then
         'UniFi AP (LR)'
       else
         model
       end
-    }
+    },
   },
-  "wd-my-net" => {
+  "WD" => {
     models: [
-      "N600",
-      "N750",
+      "My-Net-N600",
+      "My-Net-N750",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
