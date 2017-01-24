@@ -81,7 +81,7 @@ layout: base
             {% if fw[0] %}
             <strong>{{ fw[0] }}:</strong>
             {% endif %}
-            <a href="{{ fw[1].sysupgrade }}">Upgrade{% if fw[1].factory : %}{% else %}=Firmware{% endif %}</a>
+            <a href="{{ fw[1].sysupgrade }}">Upgrade{% if fw[1].factory %}{% else %}=Firmware{% endif %}</a>
             {% endif %}
             <br/>
             {% endfor %}
