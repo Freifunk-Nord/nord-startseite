@@ -115,8 +115,8 @@ GROUPS = {
   },
   "Raspberry Pi" => {
     models: [
-      "Raspberry-Pi",
-      "Raspberry-Pi-2"
+      "",
+      "2"
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
