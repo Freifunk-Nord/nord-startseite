@@ -62,7 +62,7 @@ layout: base
           <td>
             <a name="{{ groups[0] }}_{{ model[0] }}"></a>
             <strong>{{ model[0] }}</strong>
-            <br><a class="infolink" href="https://wiki.openwrt.org/toh/{{ groups[0] | slugify: 'pretty' }}/{{ model[0] | slugify: 'pretty' | replace: '/','-' | replace: 'N-ND','ND' }}" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/{{ groups[0] | slugify: 'pretty' }}/{{ model[0] | slugify: 'pretty' | replace: '/','-' | replace: 'N-ND','ND'  | replace: 'n-nd','nd' }}" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
           </td>
           <td>
             {% for fw in model[1] %}
