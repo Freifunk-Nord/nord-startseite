@@ -5,12 +5,12 @@ require 'pp'
 
 COMMUNITY_TLD = 'ffnord'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-FIRMWARE_VERSION = '2016.2.2'
+FIRMWARE_VERSION = '2016.2.3'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
 FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/stable/'
-FIRMWARE_MIRROR = 'http://vpn2.freifunknord.de/firmware/v2016.2.2/stable/'
+FIRMWARE_MIRROR = 'http://vpn2.freifunknord.de/firmware/stable/'
 
 GROUPS = {
   "8Devices" => {
