@@ -155,6 +155,7 @@ GROUPS = {
       "TL-WR841N/ND",
       "TL-WR842N/ND",
       "TL-WR843N/ND",
+      "TL-WR940N",
       "TL-WR940N/ND",
       "TL-WR941N/ND",
     ],
