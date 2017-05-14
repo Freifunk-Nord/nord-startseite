@@ -5,12 +5,12 @@ require 'pp'
 
 COMMUNITY_TLD = 'ffnord'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-FIRMWARE_VERSION = '2016.2.4'
+FIRMWARE_VERSION = '2016.2.5'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
-FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/stable/'
-FIRMWARE_MIRROR = 'https://github.com/Freifunk-Nord/nord-firmware-archiv/tree/master/2016.2.4/'
+FIRMWARE_BASE = 'https://freifunknord.de/firmware/stable/'
+FIRMWARE_MIRROR = 'https://github.com/Freifunk-Nord/nord-firmware-archiv/'
 
 GROUPS = {
   "8Devices" => {

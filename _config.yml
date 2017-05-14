@@ -11,13 +11,13 @@ community:
   # Custom URLs
   url_wiki:  "http://wiki.freifunk.net/Freifunk_Nord/"
   url_webchat: "https://riot.eclabs.de/#/room/#ffnord:irc.hackint.org"
-  url_geomap: "http://mesh.nord.freifunk.net/"
-  url_graph: "http://mesh.nord.freifunk.net/#!v:g"
-  url_nodelist: "https://mesh.nord.freifunk.net/nodelist/"
+  url_geomap: "https://mesh.freifunknord.de/"
+  url_graph: "https://mesh.freifunknord.de/#!v:g"
+  url_nodelist: "https://mesh.freifunknord.de/nodelist/"
 
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net"
 
-  url_firmware: "http://nord.freifunk.net/firmware.html"
+  url_firmware: "https://freifunknord.de/firmware.html"
 
   url_blog_cms: "https://github.com/Freifunk-Nord/nord-blog"
 
@@ -36,8 +36,8 @@ community:
   geo_lon: 10.0
 
 firmware:
-  base: "https://nord.freifunk.net/firmware/stable/"
-  firmware_mirror: "http://vpn3.ffnord.net/firmware/stable/"
+  base: "https://freifunknord.de/firmware/stable/"
+  firmware_mirror: "https://mesh.freifunknord.de/firmware/stable/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
@@ -49,5 +49,5 @@ firmware:
 tld:
   label: "ffnord"
   ns:
-    - "10.187.160.1"
-    - "2a03:2267:4e6f:7264::01"
+    - "10.187.1.1"
+    - "fd42:eb49:c0b5:4242::fd00"
