@@ -43,7 +43,7 @@ body{
 }
 </style>
 </head>
-<body><a href="https://mesh.nord.freifunk.net/" target="_blank">
+<body><a href="https://mesh.freifunknord.de/" target="_blank">
 <div class="num"><NUM_NODES></div>
 <div class="onl">Knoten online</div></a>
 <br>
