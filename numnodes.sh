@@ -22,8 +22,8 @@ HOSTLIST=$( cat $JSON |jq '.[]'|grep hostname|cut -d' ' -f8| tr '\n' ' '| sed 's
 cd `dirname "$0"`
 sed 's/<NUM_NODES>/'$num'/g' numnodes.template | sed "s/<HOSTLIST>/$HOSTLIST/g" > numnodes.html
 
-echo "$(date) numnodes: $num">>$logfile
-echo "$(date) hosts: $HOSTLIST">>$logfile
+#echo "$(date) numnodes: $num">>$logfile
+#echo "$(date) hosts: $HOSTLIST">>$logfile
 
 #echo -n "offlilne nodes: "
 #cat $JSON |jq '.nodes[] | select(.flags.gateway==false) | select(.flags.online==false)'|grep online|wc -l
