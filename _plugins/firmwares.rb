@@ -5,7 +5,7 @@ require 'pp'
 
 COMMUNITY_TLD = 'ffnord'
 FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-FIRMWARE_VERSION = '2016.2.7'
+FIRMWARE_VERSION = '2016.2.7.1'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 #FIRMWARE_BASE = site.config['firmware']['base']
