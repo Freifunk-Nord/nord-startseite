@@ -1,3 +1,7 @@
+=begin
+
+# everything commented, because otherwise the main generator doesn't work
+
 require 'net/http'
 require 'uri'
 require 'nokogiri'
@@ -367,3 +371,4 @@ module Jekyll
     end
   end
 end
+=end

@@ -1,8 +1,85 @@
----
-layout: base
----
+<!DOCTYPE html>
 
-<div class="heading">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Freifunk Nord</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="/stylesheets/app.css">
+
+  <script src="/javascripts/modernizr.foundation.js"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/favicons/manifest.json">
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- End -->
+
+</head>
+<body>
+
+  <!-- Header and Nav -->
+
+
+  <div class="row header">
+    <div class="nine columns">
+      <h1 id="site_title">
+        Freifunk Nord
+      </h1>
+
+      <ul class="link-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/mitmachen.html">Mitmachen!</a></li>
+        <li><a href="/firmware_select.html">Firmware</a></li>
+        <li><a href="/treffen.html">Treffen</a></li>
+        <li><a href="/verein.html">Verein</a></li>
+        <li><a href="https://forum.freifunk.net/c/meta-community/freifunk-nord" target="_blank">Forum</a></li>
+        <li><a href="https://riot.eclabs.de/#/room/#ffnord:irc.hackint.org" target="_blank">Webchat</a></li>
+        <li><a href="/spenden.html">Spenden</a></li>
+      </ul>
+    </div>
+    <iframe class="numnodes" src="/numnodes.html" border="0" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+  </div>
+
+  <!-- End Header and Nav -->
+
+  <div class="heading">
   <div class="row">
     <div class="twelve columns">
       <h1>Firmware</h1>
@@ -13,7 +90,7 @@ layout: base
 <div class="row">
   <div class="eight columns">
     <h2>Download der Firmware</h2>
-    <p>	Bei fragen, komme in den IRC Chat hackint.org #ffnord oder in unseren <a href="{{ site.community.url_webchat }}">Webchat</a>.
+    <p>	Bei fragen, komme in den IRC Chat hackint.org #ffnord oder in unseren <a href="https://riot.eclabs.de/#/room/#ffnord:irc.hackint.org">Webchat</a>.
     </p>
 
     <h4>Häufigste Modelle</h4>
@@ -38,13 +115,13 @@ layout: base
 
   <div class="row">
   <div class="eight columns">
-    <p><strong>Aktuelle Firmware-Version: {{ site.fw_ndh_version }}</strong></p>
+    <p><strong>Aktuelle Firmware-Version: 2017.1.4</strong></p>
   </div>
 </div>
 
-    {% for groups in site.fw_ndh %}
-    <h2><a name="{{ groups[0] }}"></a>
-    {{ groups[0] }}</h2>
+
+    <h2><a name="8Devices"></a>
+    8Devices</h2>
     <table class="firmwarelist">
       <thead>
         <tr>
@@ -55,42 +132,3919 @@ layout: base
         </tr>
       </thead>
       <tbody>
-        {% for model in groups[1] %}
+
         <tr>
-          <td class="router" style="background-image:url(images/models/{{ groups[0] | downcase | replace: ' ','-' }}-{{ model[0] | downcase | replace: ' ','-' | replace: '/','-' }}_100x60.png)">
+          <td class="router" style="background-image:url(images/models/8devices-carambola2-board_100x60.png)">
           </td>
           <td>
-            <a name="{{ groups[0] }}_{{ model[0] }}"></a>
-            <strong>{{ model[0] }}</strong>
-            <br><a class="infolink" href="https://wiki.openwrt.org/toh/{{ groups[0] | slugify: 'pretty' }}/{{ model[0] | slugify: 'pretty' | replace: '/','-' | replace: 'N-ND','ND'  | replace: 'n-nd','nd' }}" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+            <a name="8Devices_Carambola2-Board"></a>
+            <strong>Carambola2-Board</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/8devices/carambola2-board" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
           </td>
           <td>
-            {% for fw in model[1] %}
-            {% if fw[1].factory %}
-            {% if fw[0] %}
-            <strong>{{ fw[0] }}:</strong>
-            {% endif %}
-            <a href="{{ fw[1].factory }}">Firmware</a>
-            {% endif %}
+
+
             <br/>
-            {% endfor %}
+
           </td>
           <td>
-            {% for fw in model[1] %}
-            {% if fw[1].sysupgrade %}
-            {% if fw[0] %}
-            <strong>{{ fw[0] }}:</strong>
-            {% endif %}
-            <a href="{{ fw[1].sysupgrade }}">Upgrade{% if fw[1].factory %}{% else %}=Firmware{% endif %}</a>
-            {% endif %}
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-8devices-carambola2-board-sysupgrade.bin">Upgrade=Firmware</a>
+
             <br/>
-            {% endfor %}
+
           </td>
         </tr>
-        {% endfor %}
+
       </tbody>
     </table>
-    {% endfor %}
+
+    <h2><a name="Alfa"></a>
+    Alfa</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/alfa-network-ap121_100x60.png)">
+          </td>
+          <td>
+            <a name="Alfa_Network-AP121"></a>
+            <strong>Network-AP121</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/alfa/network-ap121" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-alfa-network-ap121.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-alfa-network-ap121-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/alfa-network-ap121u_100x60.png)">
+          </td>
+          <td>
+            <a name="Alfa_Network-AP121U"></a>
+            <strong>Network-AP121U</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/alfa/network-ap121u" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-alfa-network-ap121u.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-alfa-network-ap121u-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/alfa-network-hornet-ub_100x60.png)">
+          </td>
+          <td>
+            <a name="Alfa_Network-Hornet-UB"></a>
+            <strong>Network-Hornet-UB</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/alfa/network-hornet-ub" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-alfa-network-hornet-ub.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-alfa-network-hornet-ub-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/alfa-network-n2-n5_100x60.png)">
+          </td>
+          <td>
+            <a name="Alfa_Network-N2-N5"></a>
+            <strong>Network-N2-N5</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/alfa/network-n2-n5" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-alfa-network-n2-n5.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-alfa-network-n2-n5-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/alfa-network-tube2h_100x60.png)">
+          </td>
+          <td>
+            <a name="Alfa_Network-Tube2H"></a>
+            <strong>Network-Tube2H</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/alfa/network-tube2h" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-alfa-network-tube2h.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-alfa-network-tube2h-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="Allnet"></a>
+    Allnet</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/allnet-all0315n_100x60.png)">
+          </td>
+          <td>
+            <a name="Allnet_ALL0315N"></a>
+            <strong>ALL0315N</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/allnet/all0315n" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-allnet-all0315n-sysupgrade.bin">Upgrade=Firmware</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="Buffalo"></a>
+    Buffalo</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/buffalo-wzr-600dhp_100x60.png)">
+          </td>
+          <td>
+            <a name="Buffalo_WZR-600DHP"></a>
+            <strong>WZR-600DHP</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/buffalo/wzr-600dhp" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-buffalo-wzr-600dhp.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/buffalo-wzr-hp-ag300h_100x60.png)">
+          </td>
+          <td>
+            <a name="Buffalo_WZR-HP-AG300H"></a>
+            <strong>WZR-HP-AG300H</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/buffalo/wzr-hp-ag300h" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-buffalo-wzr-hp-ag300h.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-buffalo-wzr-hp-ag300h-wzr-600dhp-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/buffalo-wzr-hp-g300nh_100x60.png)">
+          </td>
+          <td>
+            <a name="Buffalo_WZR-HP-G300NH"></a>
+            <strong>WZR-HP-G300NH</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/buffalo/wzr-hp-g300nh" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-buffalo-wzr-hp-g300nh2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-buffalo-wzr-hp-g300nh2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/buffalo-wzr-hp-g450h_100x60.png)">
+          </td>
+          <td>
+            <a name="Buffalo_WZR-HP-G450H"></a>
+            <strong>WZR-HP-G450H</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/buffalo/wzr-hp-g450h" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-buffalo-wzr-hp-g450h.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-buffalo-wzr-hp-g450h-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="D-Link"></a>
+    D-Link</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/d-link-dir-505_100x60.png)">
+          </td>
+          <td>
+            <a name="D-Link_DIR-505"></a>
+            <strong>DIR-505</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/d-link/dir-505" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>A1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-d-link-dir-505-rev-a1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>A2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-d-link-dir-505-rev-a2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>A1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-d-link-dir-505-rev-a1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>A2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-d-link-dir-505-rev-a2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/d-link-dir-615_100x60.png)">
+          </td>
+          <td>
+            <a name="D-Link_DIR-615"></a>
+            <strong>DIR-615</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/d-link/dir-615" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>C1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-d-link-dir-615-rev-c1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>C1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-d-link-dir-615-rev-c1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/d-link-dir-825_100x60.png)">
+          </td>
+          <td>
+            <a name="D-Link_DIR-825"></a>
+            <strong>DIR-825</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/d-link/dir-825" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>B1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-d-link-dir-825-rev-b1-sysupgrade.bin">Upgrade=Firmware</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="GL"></a>
+    GL</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/gl-ar150_100x60.png)">
+          </td>
+          <td>
+            <a name="GL_AR150"></a>
+            <strong>AR150</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/gl/ar150" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>sysupgrade:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-gl-ar150-sysupgrade.bin">Upgrade=Firmware</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="GL-iNet"></a>
+    GL-iNet</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/gl-inet-6408a_100x60.png)">
+          </td>
+          <td>
+            <a name="GL-iNet_6408A"></a>
+            <strong>6408A</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/gl-inet/6408a" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-gl-inet-6408a-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-gl-inet-6408a-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/gl-inet-6416a_100x60.png)">
+          </td>
+          <td>
+            <a name="GL-iNet_6416A"></a>
+            <strong>6416A</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/gl-inet/6416a" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-gl-inet-6416a-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-gl-inet-6416a-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="Linksys"></a>
+    Linksys</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/linksys-wrt160nl_100x60.png)">
+          </td>
+          <td>
+            <a name="Linksys_WRT160NL"></a>
+            <strong>WRT160NL</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/linksys/wrt160nl" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-linksys-wrt160nl.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-linksys-wrt160nl-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="Meraki"></a>
+    Meraki</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/meraki-mr12_100x60.png)">
+          </td>
+          <td>
+            <a name="Meraki_mr12"></a>
+            <strong>mr12</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/meraki/mr12" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-meraki-mr12-sysupgrade.bin">Upgrade=Firmware</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/meraki-mr16_100x60.png)">
+          </td>
+          <td>
+            <a name="Meraki_mr16"></a>
+            <strong>mr16</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/meraki/mr16" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-meraki-mr16-sysupgrade.bin">Upgrade=Firmware</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/meraki-mr62_100x60.png)">
+          </td>
+          <td>
+            <a name="Meraki_mr62"></a>
+            <strong>mr62</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/meraki/mr62" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-meraki-mr62-sysupgrade.bin">Upgrade=Firmware</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/meraki-mr66_100x60.png)">
+          </td>
+          <td>
+            <a name="Meraki_mr66"></a>
+            <strong>mr66</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/meraki/mr66" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-meraki-mr66-sysupgrade.bin">Upgrade=Firmware</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="NETGEAR"></a>
+    NETGEAR</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/netgear-wndr3700_100x60.png)">
+          </td>
+          <td>
+            <a name="NETGEAR_WNDR3700"></a>
+            <strong>WNDR3700</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/netgear/wndr3700" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-netgear-wndr3700.img">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-netgear-wndr3700v2.img">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-netgear-wndr3700v4.img">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-netgear-wndr3700-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-netgear-wndr3700v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-netgear-wndr3700v4-sysupgrade.tar">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/netgear-wndr3800_100x60.png)">
+          </td>
+          <td>
+            <a name="NETGEAR_WNDR3800"></a>
+            <strong>WNDR3800</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/netgear/wndr3800" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-netgear-wndr3800.img">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-netgear-wndr3800-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/netgear-wndr4300_100x60.png)">
+          </td>
+          <td>
+            <a name="NETGEAR_WNDR4300"></a>
+            <strong>WNDR4300</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/netgear/wndr4300" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-netgear-wndr4300.img">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-netgear-wndr4300-sysupgrade.tar">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/netgear-wndrmac_100x60.png)">
+          </td>
+          <td>
+            <a name="NETGEAR_WNDRMAC"></a>
+            <strong>WNDRMAC</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/netgear/wndrmac" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-netgear-wndrmac.img">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-netgear-wndrmacv2.img">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-netgear-wndrmac-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-netgear-wndrmacv2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="Onion"></a>
+    Onion</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/onion-omega_100x60.png)">
+          </td>
+          <td>
+            <a name="Onion_Omega"></a>
+            <strong>Omega</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/onion/omega" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-onion-omega.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-onion-omega-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="OpenMesh"></a>
+    OpenMesh</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/openmesh-mr600_100x60.png)">
+          </td>
+          <td>
+            <a name="OpenMesh_MR600"></a>
+            <strong>MR600</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/openmesh/mr600" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-mr600.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-mr600v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-mr600-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-mr600v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/openmesh-mr900_100x60.png)">
+          </td>
+          <td>
+            <a name="OpenMesh_MR900"></a>
+            <strong>MR900</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/openmesh/mr900" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-mr900.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-mr900v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-mr900-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-mr900v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/openmesh-om2p_100x60.png)">
+          </td>
+          <td>
+            <a name="OpenMesh_OM2P"></a>
+            <strong>OM2P</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/openmesh/om2p" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om2p.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om2pv2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om2p-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om2pv2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/openmesh-om2p-hs_100x60.png)">
+          </td>
+          <td>
+            <a name="OpenMesh_OM2P-HS"></a>
+            <strong>OM2P-HS</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/openmesh/om2p-hs" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om2p-hs.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om2p-hsv2.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om2p-hsv3.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om2p-hs-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om2p-hsv2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om2p-hsv3-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/openmesh-om2p-lc_100x60.png)">
+          </td>
+          <td>
+            <a name="OpenMesh_OM2P-LC"></a>
+            <strong>OM2P-LC</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/openmesh/om2p-lc" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om2p-lc.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om2p-lc-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/openmesh-om5p_100x60.png)">
+          </td>
+          <td>
+            <a name="OpenMesh_OM5P"></a>
+            <strong>OM5P</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/openmesh/om5p" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>-ac:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om5p-ac.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>-acv2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om5p-acv2.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om5p.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>-ac:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om5p-ac-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>-acv2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om5p-acv2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om5p-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/openmesh-om5p-an_100x60.png)">
+          </td>
+          <td>
+            <a name="OpenMesh_OM5P-AN"></a>
+            <strong>OM5P-AN</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/openmesh/om5p-an" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-om5p-an.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-om5p-an-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/openmesh-mr1750_100x60.png)">
+          </td>
+          <td>
+            <a name="OpenMesh_mr1750"></a>
+            <strong>mr1750</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/openmesh/mr1750" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-mr1750.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-mr1750-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/openmesh-mr1750v2_100x60.png)">
+          </td>
+          <td>
+            <a name="OpenMesh_mr1750v2"></a>
+            <strong>mr1750v2</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/openmesh/mr1750v2" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-openmesh-mr1750v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-openmesh-mr1750v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="Raspberry Pi"></a>
+    Raspberry Pi</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/raspberry-pi-_100x60.png)">
+          </td>
+          <td>
+            <a name="Raspberry Pi_"></a>
+            <strong></strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/raspberry-pi/" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-raspberry-pi.img.gz">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-raspberry-pi-sysupgrade.img.gz">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/raspberry-pi-2_100x60.png)">
+          </td>
+          <td>
+            <a name="Raspberry Pi_2"></a>
+            <strong>2</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/raspberry-pi/2" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-raspberry-pi-2.img.gz">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-raspberry-pi-2-sysupgrade.img.gz">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="TP-Link"></a>
+    TP-Link</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-archer-c5_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_ARCHER-C5"></a>
+            <strong>ARCHER-C5</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/archer-c5" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-archer-c5-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-archer-c5-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-archer-c7_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_ARCHER-C7"></a>
+            <strong>ARCHER-C7</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/archer-c7" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-archer-c7-v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-archer-c7-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-cpe210_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_CPE210"></a>
+            <strong>CPE210</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/cpe210" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1.0:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-cpe210-v1.0.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v1.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-cpe210-v1.1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1.0:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-cpe210-v1.0-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v1.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-cpe210-v1.1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-cpe220_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_CPE220"></a>
+            <strong>CPE220</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/cpe220" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-cpe220-v1.1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-cpe220-v1.1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-cpe510_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_CPE510"></a>
+            <strong>CPE510</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/cpe510" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1.0:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-cpe510-v1.0.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v1.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-cpe510-v1.1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1.0:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-cpe510-v1.0-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v1.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-cpe510-v1.1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-cpe520_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_CPE520"></a>
+            <strong>CPE520</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/cpe520" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-cpe520-v1.1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-cpe520-v1.1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-mr13u_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-MR13U"></a>
+            <strong>TL-MR13U</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-mr13u" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-mr13u-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-mr13u-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-mr3020_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-MR3020"></a>
+            <strong>TL-MR3020</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-mr3020" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-mr3020-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-mr3020-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-mr3040_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-MR3040"></a>
+            <strong>TL-MR3040</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-mr3040" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-mr3040-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-mr3040-v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-mr3040-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-mr3040-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-mr3220_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-MR3220"></a>
+            <strong>TL-MR3220</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-mr3220" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-mr3220-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-mr3220-v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-mr3220-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-mr3220-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-mr3420_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-MR3420"></a>
+            <strong>TL-MR3420</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-mr3420" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-mr3420-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-mr3420-v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-mr3420-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-mr3420-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wa701n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WA701N/ND"></a>
+            <strong>TL-WA701N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wa701nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa701n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa701n-nd-v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa701n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa701n-nd-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wa750re_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WA750RE"></a>
+            <strong>TL-WA750RE</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wa750re" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa750re-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa750re-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wa7510n_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WA7510N"></a>
+            <strong>TL-WA7510N</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wa7510n" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa7510n-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa7510n-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wa801n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WA801N/ND"></a>
+            <strong>TL-WA801N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wa801nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa801n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa801n-nd-v2.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa801n-nd-v3.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa801n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa801n-nd-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa801n-nd-v3-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wa830re_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WA830RE"></a>
+            <strong>TL-WA830RE</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wa830re" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa830re-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa830re-v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa830re-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa830re-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wa850re_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WA850RE"></a>
+            <strong>TL-WA850RE</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wa850re" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa850re-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa850re-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wa860re_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WA860RE"></a>
+            <strong>TL-WA860RE</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wa860re" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa860re-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa860re-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wa901n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WA901N/ND"></a>
+            <strong>TL-WA901N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wa901nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa901n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa901n-nd-v2.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa901n-nd-v3.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wa901n-nd-v4.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa901n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa901n-nd-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa901n-nd-v3-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wa901n-nd-v4-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wdr3500_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WDR3500"></a>
+            <strong>TL-WDR3500</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wdr3500" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wdr3500-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wdr3500-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wdr3600_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WDR3600"></a>
+            <strong>TL-WDR3600</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wdr3600" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wdr3600-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wdr3600-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wdr4300_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WDR4300"></a>
+            <strong>TL-WDR4300</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wdr4300" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wdr4300-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wdr4300-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wdr4900_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WDR4900"></a>
+            <strong>TL-WDR4900</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wdr4900" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wdr4900-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wdr4900-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr1043n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR1043N/ND"></a>
+            <strong>TL-WR1043N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr1043nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr1043n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr1043n-nd-v2.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr1043n-nd-v3.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr1043n-nd-v4.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr1043n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr1043n-nd-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr1043n-nd-v3-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr1043n-nd-v4-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr2543n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR2543N/ND"></a>
+            <strong>TL-WR2543N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr2543nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr2543n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr2543n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr703n_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR703N"></a>
+            <strong>TL-WR703N</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr703n" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr703n-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr703n-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr710n_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR710N"></a>
+            <strong>TL-WR710N</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr710n" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr710n-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr710n-v2.1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr710n-v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr710n-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2.1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr710n-v2.1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr710n-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr740n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR740N/ND"></a>
+            <strong>TL-WR740N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr740nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr740n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr740n-nd-v3.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr740n-nd-v4.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v5:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr740n-nd-v5.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr740n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr740n-nd-v3-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr740n-nd-v4-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v5:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr740n-nd-v5-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr741n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR741N/ND"></a>
+            <strong>TL-WR741N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr741nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr741n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr741n-nd-v2.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr741n-nd-v4.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v5:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr741n-nd-v5.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr741n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr741n-nd-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr741n-nd-v4-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v5:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr741n-nd-v5-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr743n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR743N/ND"></a>
+            <strong>TL-WR743N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr743nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr743n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr743n-nd-v2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr743n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr743n-nd-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr841n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR841N/ND"></a>
+            <strong>TL-WR841N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr841nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v10:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v10.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v11:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v11.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v12:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v12.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v3.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v5:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v5.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v7:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v7.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v8:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v8.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v9:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v9.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v10:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v10-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v11:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v11-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v12:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v12-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v3-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v5:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v5-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v7:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v7-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v8:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v8-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v9:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr841n-nd-v9-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr842n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR842N/ND"></a>
+            <strong>TL-WR842N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr842nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr842n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr842n-nd-v2.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr842n-nd-v3.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr842n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr842n-nd-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr842n-nd-v3-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr843n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR843N/ND"></a>
+            <strong>TL-WR843N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr843nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr843n-nd-v1.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr843n-nd-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr940n_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR940N"></a>
+            <strong>TL-WR940N</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr940n" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr940n-v1.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr940n-v2.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr940n-v3.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr940n-v4.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v1:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr940n-v1-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr940n-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr940n-v3-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr940n-v4-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/tp-link-tl-wr941n-nd_100x60.png)">
+          </td>
+          <td>
+            <a name="TP-Link_TL-WR941N/ND"></a>
+            <strong>TL-WR941N/ND</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/tp-link/tl-wr941nd" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v2.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v3.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v4.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v5:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v5.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>v6:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v6.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>v2:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v3:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v3-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v4:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v4-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v5:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v5-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>v6:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-tp-link-tl-wr941n-nd-v6-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="Ubiquiti"></a>
+    Ubiquiti</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-airgateway_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Airgateway"></a>
+            <strong>Airgateway</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/airgateway" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-airgateway.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-airgateway-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-airrouter_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Airrouter"></a>
+            <strong>Airrouter</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/airrouter" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-airrouter.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-airrouter-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-bullet-m_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Bullet M"></a>
+            <strong>Bullet M</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/bullet-m" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>XM:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-bullet-m5.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>XM:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-bullet-m5-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-ls-sr71_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_LS-SR71"></a>
+            <strong>LS-SR71</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/ls-sr71" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-ls-sr71.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-ls-sr71-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-loco-m_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Loco M"></a>
+            <strong>Loco M</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/loco-m" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-loco-m-xw.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-loco-m-xw-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-nanostation-m_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Nanostation M"></a>
+            <strong>Nanostation M</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/nanostation-m" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-nanostation-m-xw.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <strong>XM:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-nanostation-m2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-nanostation-m-xw-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <strong>XM:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-nanostation-m2-xw-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-nanostation-m5_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Nanostation M5"></a>
+            <strong>Nanostation M5</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/nanostation-m5" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-nanostation-m5-xw.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-nanostation-m5.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-nanostation-m5-xw-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-nanostation-m5-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-nanostation-loco-m2_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Nanostation-Loco M2"></a>
+            <strong>Nanostation-Loco M2</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/nanostation-loco-m2" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-nanostation-loco-m2-xw.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-nanostation-loco-m2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-nanostation-loco-m2-xw-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-nanostation-loco-m2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-nanostation-loco-m5_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Nanostation-Loco M5"></a>
+            <strong>Nanostation-Loco M5</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/nanostation-loco-m5" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-nanostation-loco-m5-xw.bin">Firmware</a>
+
+            <br/>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-nanostation-loco-m5.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <strong>XW:</strong>
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-nanostation-loco-m5-xw-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-nanostation-loco-m5-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-picostation-m_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Picostation M"></a>
+            <strong>Picostation M</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/picostation-m" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-picostation-m2.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-picostation-m2-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-rocket-m_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Rocket M"></a>
+            <strong>Rocket M</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/rocket-m" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-rocket-m5.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-rocket-m5-xw-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-rocket-m-xw_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_Rocket M XW"></a>
+            <strong>Rocket M XW</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/rocket-m-xw" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-rocket-m-xw.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-rocket-m-xw-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-unifi-ap-(lr)_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_UniFi AP (LR)"></a>
+            <strong>UniFi AP (LR)</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/unifi-ap-(lr)" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-unifi.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-unifi-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-unifi-ap-pro_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_UniFi AP Pro"></a>
+            <strong>UniFi AP Pro</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/unifi-ap-pro" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-unifi-ap-pro.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-unifi-ap-pro-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/ubiquiti-unifiap-outdoor_100x60.png)">
+          </td>
+          <td>
+            <a name="Ubiquiti_UniFiAP Outdoor"></a>
+            <strong>UniFiAP Outdoor</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/ubiquiti/unifiap-outdoor" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-ubiquiti-unifiap-outdoor.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-ubiquiti-unifiap-outdoor-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="WD"></a>
+    WD</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/wd-my-net-n600_100x60.png)">
+          </td>
+          <td>
+            <a name="WD_My-Net-N600"></a>
+            <strong>My-Net-N600</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/wd/my-net-n600" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-wd-my-net-n600.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-wd-my-net-n600-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/wd-my-net-n750_100x60.png)">
+          </td>
+          <td>
+            <a name="WD_My-Net-N750"></a>
+            <strong>My-Net-N750</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/wd/my-net-n750" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-wd-my-net-n750.bin">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-wd-my-net-n750-sysupgrade.bin">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h2><a name="x86"></a>
+    x86</h2>
+    <table class="firmwarelist">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Modell</th>
+          <th>Erstinstallation</th>
+          <th>Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/x86-64_100x60.png)">
+          </td>
+          <td>
+            <a name="x86_64"></a>
+            <strong>64</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/x86/64" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-x86-64.vmdk">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-x86-64-sysupgrade.img.gz">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td class="router" style="background-image:url(images/models/x86-generic_100x60.png)">
+          </td>
+          <td>
+            <a name="x86_Generic"></a>
+            <strong>Generic</strong>
+            <br><a class="infolink" href="https://wiki.openwrt.org/toh/x86/generic" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/factory/gluon-ffnh-2017.1.4-x86-generic.vmdk">Firmware</a>
+
+            <br/>
+
+          </td>
+          <td>
+
+
+
+            <a href="http://map.freifunk-nordheide.de/firmware/stable/sysupgrade/gluon-ffnh-2017.1.4-x86-generic-sysupgrade.img.gz">Upgrade</a>
+
+            <br/>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
 
     <p>
     Die Freifunk-Firmware ist Freie Software. Sie basiert auf dem <a href="https://github.com/freifunk-gluon/gluon">Gluon-Framework</a> und <a href="https://openwrt.org/">OpenWrt</a> und darf nach den Bestimmungen der <a href="https://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License</a> weiterverteilt und verändert werden.
@@ -105,12 +4059,88 @@ layout: base
     </a>
   </div>
   <div class="four columns panel" id="firmware-info-box">
-    <p>Sämtliche Firmware-Dateien findest du unter <a href="{{ site.firmware.base }}">{{ site.firmware.base }}</a>.</p>
-    <p>Firmware-mirror: <a href="{{ site.firmware_mirror }}">{{ site.firmware_mirror }}</a>.</p>
-    <p>Das Gluon-Site-Repository befindet sich unter <a href="{{ site.firmware.gluon_site }}">{{ site.firmware.gluon_site }}</a>.</p>
+    <p>Sämtliche Firmware-Dateien findest du unter <a href="https://freifunknord.de/firmware/stable/">https://freifunknord.de/firmware/stable/</a>.</p>
+    <p>Firmware-mirror: <a href=""></a>.</p>
+    <p>Das Gluon-Site-Repository befindet sich unter <a href="https://github.com/Freifunk-Nord/nord-site/">https://github.com/Freifunk-Nord/nord-site/</a>.</p>
   </div>
   <div class="four columns panel">
     <h5>Nutzungsbedingungen</h5>
     <p>Für die Verwendung der Freifunk Firmware in Verbindung mit dem angebotenem Übergang ins Internet gelten unsere <a href="/nutzungsbedingungen.html">Nutzungsbedingungen</a>.</p>
   </div>
 </div>
+
+
+  <footer>
+    <div class="row">
+      <div class="six columns">
+        <h5>Kontakt</h5>
+        <p>
+        <strong>Problem melden:</strong> <a href="https://osticket.freifunknord.de/">Ticket System</a> <br/>
+        <strong>E-Mail:</strong> <a href="mailto:kontakt@freifunknord.de">kontakt@freifunknord.de</a> <br/>
+        <strong>Mailingliste:</strong> <a href="http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net">ffnord@freifunk.net</a> <br/>
+
+          <strong>IRC:</strong> ffnord im <a href="http://hackint.org">hackint</a> | <a href="https://riot.eclabs.de/#/room/#ffnord:irc.hackint.org">Live Webchat</a><br/>
+
+          <strong>Forum:</strong> <a href="https://forum.freifunk.net/c/meta-community/freifunk-nord">forum.freifunk.net</a><br/>
+          <strong>Twitter:</strong> <a href="https://twitter.com/FreifunkNord">@FreifunkNord</a><br/>
+
+          <a href="/impressum.html">Impressum</a>
+        </p>
+      </div>
+      <div class="four columns">
+        <h5>Links</h5>
+        <ul>
+          <li><a href="http://wiki.freifunk.net/Freifunk_Nord/">Wiki</a></li>
+          <li><a href="https://mesh.freifunknord.de/nodelist/">Knotenliste</a></li>
+          <li><a href="https://mesh.freifunknord.de/#!v:g">Netzgraph</a></li>
+          <li><a href="https://mesh.freifunknord.de/">Knotenkarte</a></li>
+          <li><a href="https://ffnord.pads.ccc.de/">Etherpad</a></li>
+          <li><a href="https://osticket.freifunknord.de/">Ticket System</a></li>
+          <li><a href="/nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
+          <li><a href="/spenden.html">Spenden</a></li>
+        </ul>
+      </div>
+      <div class="four columns">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+
+  <script src="javascripts/jquery.js"></script>
+
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+
+  <script src="javascripts/jquery.placeholder.js"></script>
+
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+
+  -->
+
+  <!-- Included JS Files (Compressed) -->
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/foundation.min.js"></script>
+
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app.js"></script>
+</body>
+</html>
