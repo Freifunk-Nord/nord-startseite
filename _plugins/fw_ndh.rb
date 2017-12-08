@@ -3,17 +3,17 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
-COMMUNITY_TLD = 'ffnord'
-FIRMWARE_PREFIX = 'gluon-' + COMMUNITY_TLD
-FIRMWARE_VERSION = '2016.2.7.1'
+COMMUNITY_TLD_FW_NDH = 'ffnh'
+FIRMWARE_PREFIX_FW_NDH = 'gluon-' + COMMUNITY_TLD_FW_NDH
+FIRMWARE_VERSION_FW_NDH = '2017.1.4'
 
-FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
-#FIRMWARE_BASE = site.config['firmware']['base']
-FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/stable/'
-#FIRMWARE_BASE = 'https://freifunk.in-kiel.de/nord-firmware/stable/'
-FIRMWARE_MIRROR = 'https://github.com/Freifunk-Nord/nord-firmware-archiv/'
+FIRMWARE_REGEX_FW_NDH = Regexp.new('^' + FIRMWARE_PREFIX_FW_NDH + '-' + FIRMWARE_VERSION_FW_NDH + '-')
+#FIRMWARE_BASE_FW_NDH = site.config['firmware']['base']
+FIRMWARE_BASE_FW_NDH = 'http://map.freifunk-nordheide.de/firmware/stable/'
+#FIRMWARE_BASE_FW_NDH = 'https://freifunk.in-kiel.de/nord-firmware/stable/'
+FIRMWARE_MIRROR_FW_NDH = 'http://map.freifunk-nordheide.de/firmware/stable/'
 
-GROUPS = {
+GROUPS_FW_NDH = {
   "8Devices" => {
     models: [
       "Carambola2-Board",
@@ -246,13 +246,13 @@ module Jekyll
   class FirmwareListGenerator < Generator
     def generate(site)
       class << site
-        attr_accessor :firmwares
+        attr_accessor :fw_ndh
         def site_payload
           result = super
-          result["site"]["firmwares"] = self.firmwares
-          result["site"]["firmware_version"] = FIRMWARE_VERSION
-          result["site"]["firmware_mirror"] = FIRMWARE_MIRROR
-          result["site"]["community_tld"] = COMMUNITY_TLD
+          result["site"]["fw_ndh"] = self.fw_ndh
+          result["site"]["fw_ndh_version"] = FIRMWARE_VERSION_FW_NDH
+          result["site"]["fw_ndh_mirror"] = FIRMWARE_MIRROR_FW_NDH
+          result["site"]["community_tld_fw_ndh"] = COMMUNITY_TLD_FW_NDH
           result
         end
       end
@@ -265,7 +265,7 @@ module Jekyll
         doc.css('a').map do |link|
           link.attribute('href').to_s
         end.uniq.sort.select do |href|
-          href.match(FIRMWARE_REGEX)
+          href.match(FIRMWARE_REGEX_FW_NDH)
         end
       end
 
@@ -290,9 +290,9 @@ module Jekyll
         nil
       end
 
-      firmwares = Hash[GROUPS.collect_concat { |group, info|
+      fw_ndh = Hash[GROUPS_FW_NDH.collect_concat { |group, info|
         info[:models].collect do |model|
-          basename = FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-' + sanitize_model_name(group + ' ' + model)
+          basename = FIRMWARE_PREFIX_FW_NDH + '-' + FIRMWARE_VERSION_FW_NDH + '-' + sanitize_model_name(group + ' ' + model)
           #print basename
           label = if info[:transform_label] then
                     info[:transform_label].call model
@@ -315,10 +315,10 @@ module Jekyll
         end
       }]
 
-      @prefixes = firmwares.keys.sort_by { |p| p.length }.reverse
+      @prefixes = fw_ndh.keys.sort_by { |p| p.length }.reverse
 
-      factory = get_files(FIRMWARE_BASE + "factory/")
-      sysupgrade = get_files(FIRMWARE_BASE + "sysupgrade/")
+      factory = get_files(FIRMWARE_BASE_FW_NDH + "factory/")
+      sysupgrade = get_files(FIRMWARE_BASE_FW_NDH + "sysupgrade/")
 
       factory.each do |href|
         basename = find_prefix href
@@ -326,12 +326,12 @@ module Jekyll
           puts "error in "+href
         else
           suffix = href[basename.length..-1]
-          info = firmwares[basename]
+          info = fw_ndh[basename]
 
           hwrev = info[:extract_rev].call info[:model], suffix
 
           fw = info[:revisions][hwrev]
-          fw.factory = FIRMWARE_BASE + "factory/" + href
+          fw.factory = FIRMWARE_BASE_FW_NDH + "factory/" + href
           info[:revisions][hwrev] = fw
         end
       end
@@ -342,19 +342,19 @@ module Jekyll
           puts "error in "+href
         else
           suffix = href[basename.length..-1]
-          info = firmwares[basename]
+          info = fw_ndh[basename]
 
           hwrev = info[:extract_rev].call info[:model], suffix
 
           fw = info[:revisions][hwrev]
-          fw.sysupgrade = FIRMWARE_BASE + "sysupgrade/" + href
+          fw.sysupgrade = FIRMWARE_BASE_FW_NDH + "sysupgrade/" + href
           info[:revisions][hwrev] = fw
         end
       end
 
-      firmwares.delete_if { |k, v| v[:revisions].empty? }
+      fw_ndh.delete_if { |k, v| v[:revisions].empty? }
 
-      groups = firmwares
+      groups = fw_ndh
                .collect { |k, v| v[:revisions] }
                .group_by { |revs| revs.values.first.label }
                .collect { |k, v| [k, v.first] }
@@ -363,7 +363,7 @@ module Jekyll
                .to_a
                .sort
 
-      site.firmwares = groups
+      site.fw_ndh = groups
     end
   end
 end

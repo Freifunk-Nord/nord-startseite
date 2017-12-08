@@ -18,7 +18,7 @@ layout: base
 
     <h4>Häufigste Modelle</h4>
       <ul>
-        <li><a href="#TP-Link_TL-WR841N/ND">TL-WR841N/ND</a></li>
+        <li><a href="#TP-Link_TL-WR842N/ND">TL-WR842N/ND</a></li>
         <li><a href="#TP-Link_TL-WR1043N/ND">TL-WR1043N/ND v2</a></li>
         <li><a href="#TP-Link">CPE210</a></li>
       </ul>
@@ -38,11 +38,11 @@ layout: base
 
   <div class="row">
   <div class="eight columns">
-    <p><strong>Aktuelle Firmware-Version: {{ site.firmware_version }}</strong></p>
+    <p><strong>Aktuelle Firmware-Version: {{ site.fw_ndh_version }}</strong></p>
   </div>
 </div>
 
-    {% for groups in site.firmwares %}
+    {% for groups in site.fw_ndh %}
     <h2><a name="{{ groups[0] }}"></a>
     {{ groups[0] }}</h2>
     <table class="firmwarelist">
