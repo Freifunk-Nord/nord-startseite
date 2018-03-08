@@ -36,8 +36,8 @@ community:
   geo_lon: 10.0
 
 firmware:
-  base: "https://freifunknord.de/firmware/stable/"
-  firmware_mirror: "https://mesh.freifunknord.de/firmware/stable/"
+  base: "http://firmware.freifunknord.de/stable/"
+  firmware_mirror: "http://mxmladepfw.cluster023.hosting.ovh.net/firmware/stable/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
