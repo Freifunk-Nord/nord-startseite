@@ -95,8 +95,7 @@
             {{ sip }}{% if forloop.rindex > 2 %}, {% else %}{%if forloop.rindex == 2%} oder {% endif %}{% endif %}{% endfor %} <br/>
           {% endif %}
           <strong>IRC:</strong> {{ site.community.irc }} im <a href="http://hackint.org">hackint</a> | <a href="{{ site.community.url_webchat }}">Live Webchat</a><br/>
-          {% if site.community contains 'twitter' %}
-          <strong>Forum:</strong> <a href="https://forum.freifunk.net/c/meta-community/freifunk-nord">forum.freifunk.net</a><br/>
+          <strong>Forum:</strong> <a href="https://forum.freifunk.net/c/Vereine/freifunk-nord">forum.freifunk.net</a><br/>
           {% endif %}
           <a href="/impressum.html">Impressum</a>
         </p>
@@ -105,7 +104,6 @@
         <h5>Links</h5>
         <ul>
           <li><a href="{{ site.community.url_wiki }}">Wiki</a></li>
-          <li><a href="{{ site.community.url_nodelist }}">Knotenliste</a></li>
           <li><a href="{{ site.community.url_graph }}">Netzgraph</a></li>
           <li><a href="{{ site.community.url_geomap }}">Knotenkarte</a></li>
           <li><a href="https://ffnord.pads.ccc.de/">Etherpad</a></li>
