@@ -28,7 +28,7 @@ community:
 
   # Other Contacts
   #sip: ["space@sip.ffki"] # Optional
-  twitter: "FreifunkNord" # Optional
+  #twitter: "FreifunkNord" # Optional
   irc: "ffnord"
 
   # GPS
