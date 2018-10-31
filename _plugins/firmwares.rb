@@ -176,7 +176,7 @@ GROUPS = {
       "CPE220",
       "CPE510",
       "CPE520",
-      # geht nicht wegen keiner version: "RE450",
+      "RE450",
       "TL-WA7210N",
       "TL-WA730RE",
       "TL-WR1043N",
@@ -214,7 +214,7 @@ GROUPS = {
       "TL-WR941N/ND",
     ],
     #            lambda macht nur, dass es jedes mal ausgeführt wird
-    extract_rev: lambda { |model, suffix| rev = /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+    extract_rev: lambda { |model, suffix| rev = /^(?:-(?!sysupgrade)(.+?))?(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "Ubnt" => {
     models: [
