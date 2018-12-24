@@ -1,3 +1,8 @@
+#!/usr/bin/ruby
+
+# error handling for "undefined method `[]' for nil:NilClass (NoMethodError)" with
+# jekyll build --trace
+
 require 'net/http'
 require 'uri'
 require 'nokogiri'
@@ -13,10 +18,21 @@ FIRMWARE_BASE = 'https://nord.freifunk.net/firmware/stable/'
 #FIRMWARE_BASE = 'https://freifunk.in-kiel.de/nord-firmware/stable/'
 FIRMWARE_MIRROR = 'https://cloud.hamburg.freifunk.net/d/7e5105c5dc/'
 
+# {} ist ein hash
+# [] ist ein array
+# foo: weist den key :foo im hash zu
+# "foo" => ist äquivalent mit foo: aber kann auch sonderzeichen enthalten (das ganze aber erst in zukunft, ab ruby 2.3)
+# lambda ist eine spezielle anonyme funktion
 GROUPS = {
   "8Devices" => {
     models: [
       "Carambola2-Board",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "A5" => {
+    models: [
+      "v11",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -62,7 +78,7 @@ GROUPS = {
       "DIR-825",
       "DIR-860L",
     ],
-    extract_rev: lambda { |model, suffix| /^-((rev-|b).+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+    extract_rev: lambda { |model, suffix| /^-(((rev-|)|b).+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "GL-iNet" => {
     models: [
@@ -76,6 +92,9 @@ GROUPS = {
       "AR150",
       "AR300M",
       "AR750",
+      "MT300A",
+      "MT300N",
+      "MT750",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
@@ -194,8 +213,17 @@ GROUPS = {
       "TL-WR940N/ND",
       "TL-WR941N/ND",
     ],
+    #            lambda macht nur, dass es jedes mal ausgeführt wird
     extract_rev: lambda { |model, suffix| rev = /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
+  "Ubnt" => {
+    models: [
+      "erx",
+      "erx-sfp",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+
   "Ubiquiti" => {
     models: [
       "Airgateway",
@@ -250,6 +278,7 @@ GROUPS = {
     models: [
       "64",
       "Generic",
+      "Geode",
       "KVM",
       "VirtualBox",
       "VMware",
@@ -257,6 +286,12 @@ GROUPS = {
       "64-VMware",
       "xen",
       "x86-64",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "Zyxel" => {
+    models: [
+      "nbg6716",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -355,7 +390,9 @@ module Jekyll
         end
       }]
 
-      @prefixes = firmwares.keys.sort_by { |p| p.length }.reverse
+      # sort_by erwartet einen block in dem auf jedes Element eine funktion angewendet wird: .length  
+      #@prefixes = firmwares.keys.sort_by { |p| p.length }.reverse
+      @prefixes = firmwares.keys.sort_by(&:length).reverse
 
       factory = get_files(FIRMWARE_BASE + "factory/")
       sysupgrade = get_files(FIRMWARE_BASE + "sysupgrade/")

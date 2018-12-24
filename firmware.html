@@ -18,11 +18,12 @@ layout: base
 
     <h4>Häufigste Modelle</h4>
       <ul>
-        <li><a href="#TP-Link_TL-WR842N/ND">TL-WR940N</a></li>
-        <li><a href="#TP-Link_TL-WR1043N/ND">TL-WR1043N/ND ab v2</a></li>
-        <li><a href="#TP-Link">CPE210 v1.0/v1.1</a> (Achtung! nur Version 1 wird unterstützt)</li>
+        <li><a href="/firmware.html#TP-Link_TL-WR841N/ND">TL-WR841N/ND</a> (Nicht mehr empfohlen!)</li>
+          <li><a href="/firmware.html#TP-Link_TL-WR842N/ND">TL-WR842N/ND</a></li>
+        <li><a href="/firmware.html#TP-Link_TL-WR1043N/ND">TL-WR1043N/ND v2 bis v4</a> (<b>Empfohlen!</b> Version 5 noch experimentell)</li>
+        <li><a href="/firmware.html#TP-Link">CPE210 v1.0/v1.1</a> (Achtung! nur Version 1 wird unterstützt)</li>
       </ul>
-
+    
     <p>Hier findest du eine Liste unterstützter Router-Modelle und ihre entsprechenden Firmware Images.</p>
     <p><b>Achtung!</b> Beim Umstieg von einer anderen Firmware aus einer anderen Community unbedingt den Haken "Einstellungen behalten"
     ausschalten, also alle Einstellungen vergessen! Die Nord Firmware kann die Einstellungen nicht korrekt übernehmen.</p>
@@ -66,7 +67,7 @@ layout: base
           <td>
             <a name="{{ groups[0] }}_{{ model[0] }}"></a>
             <strong>{{ model[0] }}</strong>
-            <br><a class="infolink" href="https://wiki.openwrt.org/toh/{{ groups[0] | slugify: 'pretty' }}/{{ model[0] | slugify: 'pretty' | replace: '/','-' | replace: 'N-ND','ND'  | replace: 'n-nd','nd' }}" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
+            <br><a class="infolink" href="https://openwrt.org/start?do=search&q={{ groups[0] | slugify: 'pretty' }}/{{ model[0] | slugify: 'pretty' | replace: '/','-' | replace: 'N-ND','ND'  | replace: 'n-nd','nd' }}" target="_blank" title="OpenWrt Wiki">&rarr; info</a>
           </td>
           <td>
             {% for fw in model[1] %}
