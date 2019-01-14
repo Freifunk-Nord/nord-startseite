@@ -10,7 +10,7 @@ community:
 
   # Custom URLs
   url_wiki:  "http://wiki.freifunk.net/Freifunk_Nord/"
-  url_webchat: "https://riot.eclabs.de/#/room/#ffnord:irc.hackint.org"
+  url_webchat: "https://riot.eclabs.de/#/room/#freifunk-nord:matrix.eclabs.de"
   url_geomap: "https://mesh.freifunknord.de/"
   url_graph: "https://mesh.freifunknord.de/#!v:g"
   url_nodelist: "https://mesh.freifunknord.de/nodelist/"
