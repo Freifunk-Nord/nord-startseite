@@ -21,11 +21,11 @@ Dependencies
 On Ubuntu/Debian:
 
     sudo apt-get install ruby2.0 ruby2.0-dev ruby-nokogiri
-    sudo gem install json jekyll
-    ggf.:
-    ln -s /usr/bin/gem$VERSION$ /usr/bin/gem
-    sudo chmod +x /usr/bin/gem
-    
+    sudo gem install json jekyll bundler
+    #ggf.:
+    #ln -s /usr/bin/gem$VERSION$ /usr/bin/gem
+    #sudo chmod +x /usr/bin/gem
+    bundle install
 
 Customization
 -------------
@@ -46,7 +46,7 @@ Choose an arbitrary location for the checkout of this repository. For editing ab
 
 The complete directory structure of what (under Debian/Ubuntu) should reside under `/path/to/www` will be built from the templates provided by
 
-	jekyll build
+    bundle exec jekyll build
 
 so it is stored in the local folder `build` outside of this repository. If something analogous to `rm -r /path/to/www; mv build /path/to/www` is no possible, you may decided for something like
 
