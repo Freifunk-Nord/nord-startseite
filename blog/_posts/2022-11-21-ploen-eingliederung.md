@@ -14,7 +14,7 @@ Eine [Domain](https://gluon.readthedocs.io/en/v2020.2.3/features/multidomain.htm
 
 **Über die nächsten Wochen wird es mehrere Updates geben, mit dennen die Router automatisch auf die neue Firmware migrieren.**
 
-In Zukunft wird es also nur noch eine Freifunknord Firmware mit 3 Domains geben. Damit die Router automatisch die richtige Domain auswählen, sind mehrere Updates nötig. Technisch werden die Bereiche `ploh` und `iz` in die Firmware für `nord` integriert. Der Aublauf sieht dann so aus (das `x` ist in `ploh`, `iz`):
+In Zukunft wird es also nur noch eine Freifunknord Firmware mit 3 Domains geben. Damit alle Router automatisch die richtige Domain auswählen, sind mehrere Updates nötig. Technisch werden die Bereiche `ploh` und `iz` in die Firmware für `nord` integriert. Der Aublauf sieht so aus (das `x` steht für  `ploh` und `iz`):
 
 1. Alte Firmware bekommt eine Domain `x`, die als default markiert ist
 2. Router updaten und merken sich `x` als ihre Domain
