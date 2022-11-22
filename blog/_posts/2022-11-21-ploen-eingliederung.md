@@ -4,7 +4,7 @@ title: Freifunk Nord Domains
 published: true
 ---
 
-<div style="line-height: 20px;white-space: pre-wrap;">
+
 
 Moin,
 
@@ -18,15 +18,13 @@ Eine Domain ist dabei nur noch eine voreingestellte Konfiguration des Routers, d
 In Zukunft wird es also nur noch eine Freifunknord Firmware mit 3 Domains geben. Damit die Router automatisch die richtige Domain auswählen, sind mehrere Updates nötig. Technisch werden die Bereiche `ploh` und `iz` in die Firmware für `nord` integriert. Der Aublauf sieht dann so aus (das `x` ist in `ploh`, `iz`):
 
 1. Alte Firmware bekommt eine Domain `x`, die als default markiert ist
-1. Router updaten und merken sich `x` als ihre Domain
-1. FFNord-Firmware bekommt zusätzlich eine Domain `x`
-1. Alte Firmware bekommt die neue Nord-Firmware über den Autoupdate
-1. Router aus den verschiedenen Bereichen wählen sich beim Update ihre Domain `x`, da sie sich diese bei Schritt 2 gespeichert haben
+2. Router updaten und merken sich `x` als ihre Domain
+3. FFNord-Firmware bekommt zusätzlich eine Domain `x`
+4. Alte Firmware bekommt die neue Nord-Firmware über den Autoupdate
+5. Router aus den verschiedenen Bereichen wählen sich beim Update ihre Domain `x`, da sie sich diese bei Schritt 2 gespeichert haben
 
 
 Falls ihr Fragen habt kommt gerne in unseren Matrix Chat und stellt sie dort oder schreibt uns eine Email.
 
 Viele Grüße und frohes Funken
 Euer Freifunknord-Team
-
-</div>
