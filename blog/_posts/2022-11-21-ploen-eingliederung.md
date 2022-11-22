@@ -12,7 +12,7 @@ das FreifunkNord Netz ist aktuell in drei Bereiche unterteilt: Plön-Ostholstein
 
 Eine [Domain](https://gluon.readthedocs.io/en/v2020.2.3/features/multidomain.html) ist dabei nur noch eine voreingestellte Konfiguration des Routers, die bei der Installation ausgewählt, oder bei Bedarf auch geändert werden kann.
 
-**Über die nächsten Wochen wird es mehrere Updates geben, mit dennen die Router automatisch auf die neue Firmware migrieren.**
+**Über die nächsten Wochen wird es mehrere Updates geben, mit denen die Router automatisch auf die neue Firmware migrieren.**
 
 In Zukunft wird es also nur noch eine Freifunknord Firmware mit 3 Domains geben. Damit alle Router automatisch die richtige Domain auswählen, sind mehrere Updates nötig. Technisch werden die Bereiche `ploh` und `iz` in die Firmware für `nord` integriert. Der Aublauf sieht so aus (das `x` steht für  `ploh` und `iz`):
 
