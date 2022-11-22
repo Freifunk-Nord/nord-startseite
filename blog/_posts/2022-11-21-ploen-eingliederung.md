@@ -26,5 +26,5 @@ In Zukunft wird es also nur noch eine Freifunknord Firmware mit 3 Domains geben.
 
 Falls ihr Fragen habt kommt gerne in unseren Matrix Chat und stellt sie dort oder schreibt uns eine Email.
 
-Viele Grüße und frohes Funken
+Viele Grüße und frohes Funken<br>
 Euer Freifunknord-Team
