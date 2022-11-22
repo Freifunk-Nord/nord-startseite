@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Freifunk Nord Domains
-published: false
+published: true
 ---
 
 <div style="line-height: 20px;white-space: pre-wrap;">
