@@ -10,10 +10,10 @@ community:
 
   # Custom URLs
   url_wiki:  "http://wiki.freifunk.net/Freifunk_Nord/"
-  url_webchat: "https://element.eclabs.de/#/room/#freifunk-nord:matrix.eclabs.de"
-  url_geomap: "https://mesh.freifunknord.de/"
-  url_graph: "https://mesh.freifunknord.de/#!v:g"
-  url_nodelist: "https://mesh.freifunknord.de/nodelist/"
+  url_webchat: "https://matrix.to/#/!freifunk-nord:matrix.eclabs.de"
+  url_geomap: "https://map.freifunknord.de/"
+  url_graph: "https://map.freifunknord.de/#!v:g"
+  url_nodelist: "https://map.freifunknord.de/nodelist/"
 
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net"
 
