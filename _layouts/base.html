@@ -86,19 +86,10 @@
       <div class="six columns">
         <h5>Kontakt</h5>
         <p>
-        <strong>Problem melden:</strong> <a href="https://osticket.freifunknord.de/">Ticket System</a> <br/>
-        <strong>E-Mail:</strong> <a href="mailto:{{ site.community.mail_info}}">{{ site.community.mail_info }}</a> <br/>
-        <strong>Mailingliste:</strong> <a href="{{ site.community.url_mailman }}">{{ site.community.mail_discussion }}</a> <br/>
-          {% if site.community contains 'sip' %}
-          <strong>SIP:</strong>
-            {% for sip in site.community.sip %}
-            {{ sip }}{% if forloop.rindex > 2 %}, {% else %}{%if forloop.rindex == 2%} oder {% endif %}{% endif %}{% endfor %} <br/>
-          {% endif %}
-          <strong>IRC:</strong> {{ site.community.irc }} im <a href="http://hackint.org">hackint</a> | <a href="{{ site.community.url_webchat }}">Live Webchat</a><br/>
+          <strong>E-Mail:</strong> <a href="mailto:{{ site.community.mail_info}}">{{ site.community.mail_info }}</a> <br/>
+          <strong>Matrix / Element:</strong> <a href="{{ site.community.url_matrix }}">{{ site.community.url_matrix }}</a> <br/>
+          <strong>Problem melden:</strong> <a href="https://osticket.freifunknord.de/">Ticket System</a> <br/>
           <strong>Forum:</strong> <a href="https://forum.freifunk.net/c/Vereine/freifunk-nord">forum.freifunk.net</a><br/>
-          {% if site.community contains 'twitter' %}
-          <strong>Twitter:</strong> <a href="https://twitter.com/{{ site.community.twitter }}">@{{ site.community.twitter }}</a><br/>
-          {% endif %}
           <a href="/impressum.html">Impressum</a>
           |
           <a href="/datenschutzerklaerung.html">Datenschutzerklärung</a>

@@ -10,7 +10,7 @@ community:
 
   # Custom URLs
   url_wiki:  "http://wiki.freifunk.net/Freifunk_Nord/"
-  url_webchat: "https://matrix.to/#/!freifunk-nord:matrix.eclabs.de"
+  url_matrix: "https://matrix.to/#/#freifunknord:matrix.org"
   url_geomap: "https://map.freifunknord.de/"
   url_graph: "https://map.freifunknord.de/#!v:g"
   url_nodelist: "https://map.freifunknord.de/nodelist/"
@@ -26,25 +26,16 @@ community:
   mail_keys: ""
   mail_discussion: "ffnord@freifunk.net"
 
-  # Other Contacts
-  #sip: ["space@sip.ffki"] # Optional
-  #twitter: "FreifunkNord" # Optional
-  irc: "ffnord"
-
   # GPS
   geo_lat: 54.0
   geo_lon: 10.0
 
 firmware:
-  base: "https://nord.freifunk.net/firmware/stable/"
-  firmware_mirror: "http://firmware.freifunknord.de/stable/"
+  base: "https://firmware.freifunk.net/stable/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
-  gluon_site: "https://github.com/Freifunk-Nord/nord-site/"
-
-  # Path to local checkout of the site repo
-  gluon_site_dir: "/opt/nord-site"
+  gluon_site: "https://git.chaotikum.org/freifunk-nord/nord-site"
 
 tld:
   label: "ffnord"
