@@ -11,6 +11,7 @@ community:
   # Custom URLs
   url_wiki:  "http://wiki.freifunk.net/Freifunk_Nord/"
   url_matrix: "https://matrix.to/#/#freifunknord:matrix.org"
+  url_matrix_room: "#freifunknord:matrix.org"
   url_geomap: "https://map.freifunknord.de/"
   url_graph: "https://map.freifunknord.de/#!v:g"
   url_nodelist: "https://map.freifunknord.de/nodelist/"
@@ -31,7 +32,7 @@ community:
   geo_lon: 10.0
 
 firmware:
-  base: "https://firmware.freifunk.net/stable/"
+  base: "https://firmware01.freifunknord.de/unified-nord/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)

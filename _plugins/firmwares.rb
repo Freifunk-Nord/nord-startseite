@@ -1,3 +1,4 @@
+=begin
 #!/usr/bin/ruby
 
 # error handling for "undefined method `[]' for nil:NilClass (NoMethodError)" with
@@ -406,7 +407,7 @@ module Jekyll
         end
       }]
 
-      # sort_by erwartet einen block in dem auf jedes Element eine funktion angewendet wird: .length  
+      # sort_by erwartet einen block in dem auf jedes Element eine funktion angewendet wird: .length
       #@prefixes = firmwares.keys.sort_by { |p| p.length }.reverse
       @prefixes = firmwares.keys.sort_by(&:length).reverse
 
@@ -462,3 +463,4 @@ module Jekyll
     end
   end
 end
+=end

@@ -1,3 +1,4 @@
+=begin
 module Jekyll
   module Filters
     def date_to_stamp(date)
@@ -25,3 +26,4 @@ module Jekyll
     end
   end
 end
+=end
