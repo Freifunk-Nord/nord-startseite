@@ -1,0 +1,83 @@
+baseURL: https://freifunknord.de/
+title: Freifunk Nord
+defaultContentLanguage: en # post dates use English month names
+
+# Keep the URLs of the former Jekyll site: /firmware.html, /blog/2015/12/04/Weihnachtsmarkt-Tarp.html
+uglyURLs: true
+disablePathToLower: true
+permalinks:
+  page:
+    blog: /blog/:year/:month/:day/:slug
+
+# Posts take date and slug from their file name: 2015-09-30-beschreibender-teil.md
+frontmatter:
+  date:
+    - :filename
+    - :default
+
+disableHugoGeneratorInject: true
+disableKinds:
+  - taxonomy
+  - term
+  - rss
+  - sitemap
+  - "404"
+
+ignoreFiles:
+  - content/blog/README\.md$
+
+# Pages are maintained as plain HTML in content/, which Hugo renders verbatim and
+# denies by default. Everything in content/ is reviewed in this repository.
+security:
+  allowContent:
+    - "! ^text/org$"
+
+markup:
+  goldmark:
+    extensions:
+      linkify: false # bare URLs stay plain text, as they were with kramdown
+    renderer:
+      unsafe: true # posts contain raw HTML
+
+params:
+  community:
+    # Metadata
+    name: "Nord"
+    meta: "Freifunk Nord"
+    country: "DE"
+
+    # Custom URLs
+    url_wiki: "http://wiki.freifunk.net/Freifunk_Nord/"
+    url_matrix: "https://matrix.to/#/#freifunknord:matrix.org"
+    url_matrix_room: "#freifunknord:matrix.org"
+    url_geomap: "https://map.freifunknord.de/"
+    url_graph: "https://map.freifunknord.de/#!v:g"
+    url_nodelist: "https://map.freifunknord.de/nodelist/"
+
+    url_mailman: "http://lists.freifunk.net/mailman/listinfo/ffnord-freifunk.net"
+
+    url_firmware: "https://freifunknord.de/firmware.html"
+
+    url_blog_cms: "https://github.com/Freifunk-Nord/nord-blog"
+
+    # Mail Contacts
+    mail_info: "kontakt@freifunknord.de"
+    mail_keys: ""
+    mail_discussion: "ffnord@freifunk.net"
+
+    # GPS
+    geo_lat: 54.0
+    geo_lon: 10.0
+
+  firmware:
+    base: "https://firmware01.freifunknord.de/unified-nord/"
+    type: "gluon"
+
+    # URL to the site repo (gitweb,github...)
+    gluon_site: "https://git.chaotikum.org/freifunk-nord/nord-site"
+
+  tld:
+    label: "ffnord"
+    ns:
+      - "10.187.1.1"
+      - "fd42:eb49:c0b5:4242::fd00"

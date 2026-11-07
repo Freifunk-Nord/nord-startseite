@@ -1,0 +1,8 @@
+{{ range partial "posts.html" . }}
+  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  <p class="postdate"><em>{{ .Date.Format "January 02, 2006" }}</em></p>
+  <p>{{ partial "excerpt.html" . }}
+  <br />
+  <a href="{{ .RelPermalink }}">mehr..</a>
+  </p>
+{{ end }}

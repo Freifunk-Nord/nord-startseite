@@ -3,133 +3,58 @@ Startseite der Community Freifunk Nord
 
 Webseite: http://www.ffnord.net/blog.html
 
-Um einen Blog Beitrag zu erstellen brauchst du keine weitere Software. Das Blog kannst du **direkt im Browser [hier auf Github](https://github.com/ffnord/nord-blog) bearbeiten**. 
+Um einen Blog Beitrag zu erstellen brauchst du keine weitere Software. Das Blog kannst du **direkt im Browser [hier auf Github](https://github.com/ffnord/nord-blog) bearbeiten**.
 
 Um die Hauptseiten zu bearbeiten, clone dises Repository und installiere ein paar Abhngigkeiten, dann kannst du auch bei dir lokal eine Kopie erstellen und testen:
 
 Dependencies
 ------------
 
-* ruby2.5
-* ruby-nokogiri
-* rubygems
-
-### Gems
-
-* jekyll
-* json
-* bundler
+* [Hugo](https://gohugo.io/) >= 0.162
 
 Install
 -------
 
 On Ubuntu/Debian:
 
-    sudo apt-get install ruby2.5-dev ruby-nokogiri rubygems
-    sudo apt purge ruby2.0* ruby2.1 ruby2.3 ruby2.4*
-    sudo gem install json jekyll bundler
-    #ggf.:
-    #ln -s /usr/bin/gem$VERSION$ /usr/bin/gem
-    #sudo chmod +x /usr/bin/gem
+    sudo apt-get install hugo
     git clone <repo-url> startseite
     cd startseite/
-    git submodule update --init --recursive --remote
-    bundle install
+
+Structure
+---------
+
+ * `hugo.yaml`: site configuration, community data below `params`
+ * `content/`: the pages as HTML, blog posts in `content/blog/`
+ * `layouts/`: page frame (`baseof.html`), blog post layout and shortcodes
+ * `assets/karte.svg`: community map on the start page
+ * `static/`: copied to the site as is (images, stylesheets, scripts, ...)
+
+Pages read values from `hugo.yaml` with the `config` shortcode, for example
+
+    {{< config "community.mail_info" >}}
 
 Customization
 -------------
 Customize the text/configuration in the following files:
 
- * `_config.yml`
- * `treffen.html`
- * `mitmachen.html`
- * `distributor.html`
- * `_plugins/firmwares.rb`
+ * `hugo.yaml`
+ * `content/treffen.html`
+ * `content/mitmachen.html`
+ * `content/distributor.html`
 
-Before you deploy the included `impressum.html` please contact
+Before you deploy the included `content/impressum.html` please contact
 the "Förderverein Freie Netzwerke e. V." and ask for their
 permission to do so. Thanks.
 
 Build
 -----
 
-Choose an arbitrary location for the checkout of this repository. For editing
-above files, we suggest to create a new branch in your local git repository.
-Patches local to your installation then remain in that branch, others commit
-to your master branch and please push those back to the archive. 
+```
+hugo
+```
 
-The complete directory structure of what (under Debian/Ubuntu) should reside 
-under `/path/to/www` will be built from the templates provided by
-
-	jekyll build
-
-On Ubuntu you might need to ensure the right environment with
-
-        bundle exec jekyll build
-
-The generated static pages will be stored in the subfolder `_site/`, that you
-should move somewhere outside of this repository. If something analogous to
-`rm -r /path/to/www; mv _site /path/to/www` is not possible, you may decided for
-something like
-
-	(cd _site && tar cf - .)|(cd /path/to/www && sudo tar xf -)
-
-to have the data transferred without deleting independent contributions.
-
-Site
-----
-
-The site doesn't run in a subdirectory, it only works correctly if it is
-called via its own (sub)domain, so you have to configure your webserver to
-route a domain on the site-path, otherwise the links to stylesheets, images,..
-are not implemented correctly.
-
-Example Configurations
-----------------------
-
-# Apache 2
-
-Add this to your `/etc/apache2/sites-enabled/`:
-
-	<VirtualHost *:80>
-		ServerName freifunk.localhost
-		DocumentRoot /path/to/www
-	</VirtualHost>
-
-# nginx
-
-	server {
-	    listen   80;
-	    server_name freifunk.localhost fflocal;
-		root /path/to/www;
-		index index.html index.php;
-
-		location / {
-			try_files $uri $uri/ =404;
-		}
-		location ~ /\.ht {
-			deny all;
-		}
-	}
-
-
-# SimpleHTTPServer
-
-For development, you can just start a SimpleHTTPServer with python:
-
-    cd _site/
-    python -m SimpleHTTPServer 8000
-    
-This will serve the `_site` folder on port http://localhost:8000
-
-
-Aftermath
----------
-
-There are several bits and pieces still missing after the installation of this
-startseite:
-
- * [meshviewer](https://github.com/ffnord/meshviewer) or [HopGlass](https://github.com/plumpudding/hopglass) from github
- * integration of the www-providing machine with the batman-adv mesh
- * mailing lists and email setup in general
- * optionally exclude the blog in an external repository like in Freifunk Nord or customize this completely so the Community can add blog articles more easily
+or
+```
+hugo server
+```

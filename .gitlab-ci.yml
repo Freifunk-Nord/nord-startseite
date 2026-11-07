@@ -1,13 +1,11 @@
-image: jekyll/jekyll:latest
-
-variables:
-  JEKYLL_ENV: production
-  LC_ALL: C.UTF-8
+image:
+  name: ghcr.io/gohugoio/hugo:v0.169.0
+  entrypoint: [""]
 
 test:
   stage: test
   script:
-  - jekyll build -d test
+  - hugo build --destination test
   artifacts:
     paths:
     - test
@@ -17,7 +15,7 @@ test:
 pages:
   stage: deploy
   script:
-  - jekyll build -d public
+  - hugo build --destination public
   artifacts:
     paths:
     - public

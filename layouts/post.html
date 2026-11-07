@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="heading">
+  <div class="row">
+    <div class="twelve columns">
+      <h1>{{ .Title }}
+        <span class="postdate">{{ .Date.Format "January 02, 2006" }}</span>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="twelve columns">
+    {{/* .highlight gives code blocks their full-width yellow background */}}
+    {{ .Content | replaceRE "<pre><code>" `<pre class="highlight"><code>` | safeHTML }}
+  </div>
+</div>
+{{ end }}

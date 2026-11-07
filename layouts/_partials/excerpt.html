@@ -1,0 +1,3 @@
+{{- $firstParagraph := index (split (strings.TrimLeft "\n" .RawContent) "\n\n") 0 -}}
+{{- $excerpt := $firstParagraph | markdownify | plainify -}}
+{{- return $excerpt -}}

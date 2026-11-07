@@ -1,0 +1,5 @@
+{{ range first 4 (partial "posts.html" .) }}
+<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+<p>{{ .Params.teaser }}</p>
+<p class="postdate"><em>{{ .Date.Format "January 02, 2006" }}</em></p>
+{{ end }}

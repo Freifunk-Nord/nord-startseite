@@ -1,4 +1,5 @@
-_site/
-build/
+public/
+test/
+resources/
+.hugo_build.lock
 *.save
-Gemfile.lock
