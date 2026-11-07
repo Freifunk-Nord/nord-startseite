@@ -2,52 +2,35 @@
 <head>
 <meta http-equiv="Refresh" content="60">
 <style>
-*{
-    font-weight: bold;
-    font-size: 34px;
-    margin:0;
-    padding: 0px;
-	border: 0px none;
-	vertical-align: baseline;
-	font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+:root { color-scheme: light dark; }
+html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; }
+body { font: 600 13px/1 system-ui, sans-serif; }
+a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 100%;
+  border: 1px solid rgb(255 255 255 / .22);
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
 }
-div, a{
-   text-align: center;
-   color: white;
-   text-shadow: 1px 1px 3px black,
-	 1px -1px 3px black,
-	 -1px 1px 3px black,
-	 -1px -1px 3px black;
+a:hover { background: rgb(255 255 255 / .1); }
+a::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffb81c;
 }
-a{
-	text-decoration: none;
-}
-body{
- background: url('images/knotenback.png');
- background-repeat: no-repeat;
-}
-.num{
-	margin-top: 22px;
-	line-height: 41px;
-	width: 116px;
-}
-.onl{
-	font-size:13px;
-	width: 116px;
-}
-.nodelist{
-	font-size:13px;
-	color: black;
-   text-shadow:none;
-	text-align:left;
-}
+.nodelist { display: none; }
 </style>
 </head>
 <body><a href="https://mesh.freifunknord.de/" target="_blank">
-<div class="num"><NUM_NODES></div>
-<div class="onl">Knoten online</div></a>
-<br>
-<hr>
+<span class="num"><NUM_NODES></span> <span class="onl">Knoten online</span></a>
 <div class="nodelist"><HOSTLIST></div>
 </body>
 </html>

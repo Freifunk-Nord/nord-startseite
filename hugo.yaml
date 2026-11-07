@@ -19,9 +19,17 @@ disableHugoGeneratorInject: true
 disableKinds:
   - taxonomy
   - term
-  - rss
   - sitemap
   - "404"
+
+# Blog feed at /feed.xml, built by layouts/home.rss.xml
+outputFormats:
+  rss:
+    baseName: feed
+outputs:
+  home: [html, rss]
+  section: [html]
+  page: [html]
 
 ignoreFiles:
   - content/blog/README\.md$

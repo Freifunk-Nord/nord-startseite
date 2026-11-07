@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
-
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
 
   <title>Freifunk {{ site.Params.community.name }}</title>
 
-
-  <!-- Included CSS Files (Compressed) -->
-  <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+  <link rel="preload" href="/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/stylesheets/app.css">
-
-  <script src="/javascripts/modernizr.foundation.js"></script>
+  <link rel="alternate" type="application/rss+xml" title="Freifunk {{ site.Params.community.name }} Blog" href="/feed.xml">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
@@ -33,57 +29,66 @@
   <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#0b1020">
   <!-- End -->
-
 </head>
 <body>
+  {{- $current := .RelPermalink }}
 
-  <!-- Header and Nav -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="/">
+        <img src="/images/freifunk-nord-logo_shadowed.png" alt="" width="44" height="30">
+        <span>Freifunk {{ site.Params.community.name }}</span>
+      </a>
 
+      <input class="nav-open" type="checkbox" id="nav-open" aria-label="Menü">
+      <label class="nav-button" for="nav-open" aria-hidden="true"><span></span></label>
 
-  <div class="row header">
-    <div class="nine columns">
-      <h1 id="site_title">
-        Freifunk {{ site.Params.community.name }}
-      </h1>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/" {{ if eq $current "/" }}aria-current="page"{{ end }}>Home</a></li>
+          <li><a href="/blog.html" {{ if eq $current "/blog.html" }}aria-current="page"{{ end }}>Blog</a></li>
+          <li><a href="/firmware.html" {{ if eq $current "/firmware.html" }}aria-current="page"{{ end }}>Firmware</a></li>
+          <li><a href="/treffen.html" {{ if eq $current "/treffen.html" }}aria-current="page"{{ end }}>Treffen</a></li>
+          <li><a href="/verein.html" {{ if eq $current "/verein.html" }}aria-current="page"{{ end }}>Verein</a></li>
+          <li><a href="https://forum.freifunk.net/c/Vereine/freifunk-nord" target="_blank">Forum</a></li>
+          <li><a href="/spenden.html" {{ if eq $current "/spenden.html" }}aria-current="page"{{ end }}>Spenden</a></li>
+          <li><a class="nav-cta" href="/mitmachen.html" {{ if eq $current "/mitmachen.html" }}aria-current="page"{{ end }}>Mitmachen!</a></li>
+        </ul>
+      </nav>
 
-      <ul class="link-list">
-        <li><a href="/">Home</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/mitmachen.html">Mitmachen!</a></li>
-        <li><a href="/firmware.html">Firmware</a></li>
-        <li><a href="/treffen.html">Treffen</a></li>
-        <li><a href="/verein.html">Verein</a></li>
-        <li><a href="https://forum.freifunk.net/c/Vereine/freifunk-nord" target="_blank">Forum</a></li>
-        <li><a href="{{ site.Params.community.url_webchat }}" target="_blank">Webchat</a></li>
-        <li><a href="/spenden.html">Spenden</a></li>
-      </ul>
+      <iframe class="numnodes" src="/numnodes.html" title="Knotenkarte" scrolling="no"></iframe>
     </div>
-    <iframe class="numnodes" src="/numnodes.html" border="0" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-  </div>
+  </header>
 
-  <!-- End Header and Nav -->
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
 
-  {{ block "main" . }}{{ end }}
-
-  <footer>
-    <div class="row">
-      <div class="six columns">
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="/images/freifunk-nord-logo_shadowed.png" alt="" width="88" height="60" loading="lazy">
+        <p>Freifunk {{ site.Params.community.name }}</p>
+      </div>
+      <div>
         <h5>Kontakt</h5>
-        <p>
-          <strong>E-Mail:</strong> <a href="mailto:{{ site.Params.community.mail_info }}">{{ site.Params.community.mail_info }}</a> <br/>
-          <strong>Matrix / Element:</strong><a href="{{ site.Params.community.url_matrix }}">{{ site.Params.community.url_matrix_room }}</a> <br/>
-          <strong>Problem melden:</strong> <a href="https://osticket.freifunknord.de/">Ticket System</a> <br/>
-          <strong>Forum:</strong> <a href="https://forum.freifunk.net/c/Vereine/freifunk-nord">forum.freifunk.net</a><br/>
+        <ul class="contact-list">
+          <li><strong>E-Mail:</strong> <a href="mailto:{{ site.Params.community.mail_info }}">{{ site.Params.community.mail_info }}</a></li>
+          <li><strong>Matrix / Element:</strong> <a href="{{ site.Params.community.url_matrix }}">{{ site.Params.community.url_matrix_room }}</a></li>
+          <li><strong>Problem melden:</strong> <a href="https://osticket.freifunknord.de/">Ticket System</a></li>
+          <li><strong>Forum:</strong> <a href="https://forum.freifunk.net/c/Vereine/freifunk-nord">forum.freifunk.net</a></li>
+        </ul>
+        <p class="legal-links">
           <a href="/impressum.html">Impressum</a>
           |
           <a href="/datenschutzerklaerung.html">Datenschutzerklärung</a>
         </p>
       </div>
-      <div class="four columns">
+      <div>
         <h5>Links</h5>
-        <ul>
+        <ul class="link-columns">
           <li><a href="{{ site.Params.community.url_wiki }}">Wiki</a></li>
           <li><a href="{{ site.Params.community.url_graph }}">Netzgraph</a></li>
           <li><a href="{{ site.Params.community.url_geomap }}">Knotenkarte</a></li>
@@ -94,16 +99,7 @@
           <li><a href="/spenden.html">Spenden</a></li>
         </ul>
       </div>
-      <div class="four columns">
-      </div>
     </div>
   </footer>
-
-  <!-- Included JS Files (Compressed) -->
-  <script src="javascripts/jquery.js"></script>
-  <script src="javascripts/foundation.min.js"></script>
-
-  <!-- Initialize JS Plugins -->
-  <script src="javascripts/app.js"></script>
 </body>
 </html>

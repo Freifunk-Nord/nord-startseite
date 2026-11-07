@@ -28,7 +28,8 @@ Structure
  * `content/`: the pages as HTML, blog posts in `content/blog/`
  * `layouts/`: page frame (`baseof.html`), blog post layout and shortcodes
  * `assets/karte.svg`: community map on the start page
- * `static/`: copied to the site as is (images, stylesheets, scripts, ...)
+ * `static/`: copied to the site as is (images, fonts, ...)
+ * `static/stylesheets/app.css`: the whole design, no CSS framework or build step
 
 Pages read values from `hugo.yaml` with the `config` shortcode, for example
 

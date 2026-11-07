@@ -11,8 +11,7 @@
 
 <div class="row">
   <div class="twelve columns">
-    {{/* .highlight gives code blocks their full-width yellow background */}}
-    {{ .Content | replaceRE "<pre><code>" `<pre class="highlight"><code>` | safeHTML }}
+    {{ .Content }}
   </div>
 </div>
 {{ end }}
